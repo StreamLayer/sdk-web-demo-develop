@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { StreamLayerProvider, ContentActivateParams, OnContentActivateCallback } from '@streamlayer/react'
 import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
@@ -67,6 +67,10 @@ function App() {
   if (!showPromo || mode === 'overlay') {
     videoContainerStyle.height = '100%'
   }
+
+  useEffect(() => {
+    window.localStorage.clear()
+  }, [])
 
   return (
     <Container>
