@@ -205,4 +205,8 @@ button:focus-visible {
       transform: scale(1);
     }
   }
+
+  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+    --header-offset: 0px;
+  }
 }

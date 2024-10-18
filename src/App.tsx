@@ -84,7 +84,7 @@ function App() {
             sidebar={!promo && showApp ? <StreamLayerSDKReact event={EVENT_ID} /> : <StreamLayerSDKAdvertisement sidebar='right' persistent />}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
             video={<VideoComponent />}
-            overlay={<StreamLayerSDKAdvertisement persistent />}
+            overlay={!promo && showApp ? <StreamLayerSDKReact event={EVENT_ID} /> : <StreamLayerSDKAdvertisement persistent />}
             notification={notification && <div onClick={showAdByNotification}><StreamLayerSDKAdvertisement notification persistent /></div>}
           />
         </AppContainer>
