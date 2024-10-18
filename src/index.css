@@ -1,0 +1,208 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --nav-bar-height: 40px;
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --nav-bar-height: 0px;
+  }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
+  :root {
+    --nav-bar-height: 0px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  :root {
+    --nav-bar-height: 40px;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: rgba(0, 22, 43, 0.90);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.StreamLayerSDK > .StreamLayerSDKTheme > .custom-theme {
+  --color-adv-bg-secondary: rgba(10, 14, 19, 0.85);
+  --adv-header-border: none;
+  --adv-media-row-gap: auto;
+  --adv-media-padding: 0;
+  --adv-title-font-size: 40px;
+  --adv-description-font-size: 21px;
+  --adv-description-height: 31.5px;
+  --adv-title-height: auto;
+  --adv-btn-font-size: 16px;
+  --adv-btn-padding: 17px 14px 19px 14px;
+  --adv-media-shift: 24px;
+  --adv-top-indent: 12px;
+  --adv-sponsor-logo-size: 42px;
+
+  .PromoOverlayContainer {
+    backdrop-filter: blur(2px);
+  }
+
+  .PromoOverlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > div:last-child {
+      margin-top: 12px;
+    }
+
+    > div:nth-child(2) {
+      overflow: auto;
+    }
+  }
+
+  .SponsorText {
+    transform: scale(1.5);
+    transform-origin: left center;
+  }
+
+  .AdvTitle {
+    white-space: wrap;
+    line-height: normal;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  .AdvDescription {
+    margin-bottom: 32px;
+  }
+
+  .ClosePromoIcon {
+    transform: scale(1.33);
+    transform-origin: right center;
+  }
+
+  .PromoSidebarContainer > div {
+    padding-left: 0 !important;
+  }
+
+  .BannerContainer {
+    padding: 0;
+  }
+
+  .BannerLink {
+    background-size: contain;
+
+    & > img {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    --adv-title-font-size: 20px;
+    --adv-description-font-size: 16px;
+    --adv-description-height: 20px;
+    --adv-btn-font-size: 14px;
+    --adv-btn-padding: 10px;
+    --adv-sponsor-logo-size: 28px;
+    --adv-header-height: 48px;
+
+    .AdvTitle {
+      margin-top: 18px;
+      margin-bottom: 4px;
+    }
+
+    .ClosePromoIcon {
+      transform: scale(1);
+    }
+
+    .SponsorText {
+      transform: scale(1);
+    }
+  }
+
+  @media only screen and (max-width: 1366px) and (orientation: landscape) {
+    --adv-title-font-size: 20px;
+    --adv-description-font-size: 16px;
+    --adv-description-height: 20px;
+    --adv-btn-font-size: 14px;
+    --adv-btn-padding: 10px;
+    --adv-header-height: 48px;
+
+    .AdvTitle {
+      margin-top: 18px;
+      margin-bottom: 4px;
+    }
+
+    .AdvDescription {
+      margin-bottom: 18.5px;
+    }
+
+    .ClosePromoIcon {
+      transform: scale(1);
+    }
+
+    .SponsorText {
+      transform: scale(1);
+    }
+  }
+}
