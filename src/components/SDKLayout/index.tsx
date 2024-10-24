@@ -14,6 +14,7 @@ type SDKLayoutProps = {
 
 export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, overlay, notification, banner, video }) => {
   const uiState = useStreamLayerUI()
+  console.log('uiState', uiState)
 
   const videoContainerRef = useRef<HTMLDivElement>(null)
   const videoBoxRef = useRef<HTMLDivElement>(null)
@@ -60,9 +61,10 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, ove
 
   useEffect(updateAspectRatio)
 
-  const hasSidebar = !notification && (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.appNotification || uiState.promotionSidebar)
-  const hasOverlay = !notification && (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
-  const hasBanner = !notification && (mode === 'l-bar') && (uiState.promotionBanner)
+  const hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.appNotification || uiState.promotionSidebar)
+  const hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
+  const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner)
+  const hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
 
   return (
     <Container className="Container">
@@ -74,7 +76,7 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, ove
         }}>
           <VideoBox ref={videoBoxRef} className="VideoBox">
             <VideoPlayer className="VideoPlayer">{video}</VideoPlayer>
-            <PointsContainer>{points}</PointsContainer>
+            {!hasPromotion && <PointsContainer>{points}</PointsContainer>}
           </VideoBox>
         </VideoContainer>
         <Banner className="Banner" style={{
