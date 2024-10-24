@@ -14,7 +14,6 @@ type SDKLayoutProps = {
 
 export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, overlay, notification, banner, video }) => {
   const uiState = useStreamLayerUI()
-  console.log('uiState', uiState)
 
   const videoContainerRef = useRef<HTMLDivElement>(null)
   const videoBoxRef = useRef<HTMLDivElement>(null)
@@ -64,6 +63,7 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, ove
   const hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.appNotification || uiState.promotionSidebar)
   const hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
   const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner)
+  const hasPromotionNotification = uiState.promotionNotification
   const hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
 
   return (
@@ -85,7 +85,7 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, ove
         }}>
           {hasBanner && banner}
         </Banner>
-        {notification && <Notification>{notification}</Notification>}
+        {hasPromotionNotification && notification && <Notification>{notification}</Notification>}
         {hasOverlay && <Overlay className="Overlay">{overlay}</Overlay>}
       </ContentContainer>
       <Sidebar style={{ width: hasSidebar ? 'var(--sidebar-width)' : '0px' }} className="Sidebar">
