@@ -55,6 +55,7 @@ export const ContentContainer = styled.div`
 
 export const Sidebar = styled.div`
   ${IS_DEBUG && 'background: orange;'}
+  overflow: hidden;
 
   transition: width .5s ease;
 

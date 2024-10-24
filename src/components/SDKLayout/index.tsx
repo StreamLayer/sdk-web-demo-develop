@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef } from 'react'
 import { Banner, Container, Notification, PointsContainer, ContentContainer, Overlay, Sidebar, SideBarOverlay, VideoBox, VideoContainer, VideoPlayer } from './styles'
+import { useStreamLayerUI } from '@streamlayer/react'
 
 type SDKLayoutProps = {
   mode: 'side-panel' | 'l-bar' | 'overlay' | 'off'
-  sidebar?: React.ReactNode
+  sidebar?: React.ReactElement
   banner?: React.ReactNode
   video?: React.ReactNode
   overlay?: React.ReactNode
@@ -12,6 +13,8 @@ type SDKLayoutProps = {
 }
 
 export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, overlay, notification, banner, video }) => {
+  const uiState = useStreamLayerUI()
+
   const videoContainerRef = useRef<HTMLDivElement>(null)
   const videoBoxRef = useRef<HTMLDivElement>(null)
 
@@ -57,32 +60,38 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, ove
 
   useEffect(updateAspectRatio)
 
+  const hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.appNotification || uiState.promotionSidebar)
+  const hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
+  const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner)
+  const hasPromotionNotification = uiState.promotionNotification
+  const hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
+
   return (
     <Container className="Container">
       <ContentContainer className="ContentContainer" style={{
-        width: mode !== 'off' ? 'calc(100% - var(--sidebar-width))' : '100%',
+        width: hasSidebar ? 'calc(100% - var(--sidebar-width))' : '100%',
       }}>
         <VideoContainer className="VideoContainer" ref={videoContainerRef} style={{
           height: mode === 'l-bar' ? 'calc(100% - var(--banner-height))' : '100%',
         }}>
           <VideoBox ref={videoBoxRef} className="VideoBox">
             <VideoPlayer className="VideoPlayer">{video}</VideoPlayer>
-            <PointsContainer>{points}</PointsContainer>
+            {!hasPromotion && <PointsContainer>{points}</PointsContainer>}
           </VideoBox>
         </VideoContainer>
         <Banner className="Banner" style={{
-          height: mode === 'l-bar' ? 'var(--banner-height)' : '0px',
-          padding: mode === 'l-bar' ? 'var(--banner-padding)' : '0px',
+          height: hasBanner ? 'var(--banner-height)' : '0px',
+          padding: hasBanner ? 'var(--banner-padding)' : '0px',
         }}>
-          {mode === 'l-bar' && banner}
+          {hasBanner && banner}
         </Banner>
-        {notification && <Notification>{notification}</Notification>}
-        {mode === 'overlay' && <Overlay>{overlay}</Overlay>}
+        {hasPromotionNotification && notification && <Notification>{notification}</Notification>}
+        {hasOverlay && <Overlay className="Overlay">{overlay}</Overlay>}
       </ContentContainer>
-      <Sidebar style={{ width: mode === 'l-bar' || mode === 'side-panel' ? 'var(--sidebar-width)' : '0px' }} className="Sidebar">
-        {(mode === 'l-bar' || mode === 'side-panel') && sidebar}
+      <Sidebar style={{ width: hasSidebar ? 'var(--sidebar-width)' : '0px' }} className="Sidebar">
+        {hasSidebar && sidebar}
       </Sidebar>
-      {mode !== 'off' && <SideBarOverlay className="Demo-SideBarOverlay">
+      {(hasSidebar || hasOverlay) && <SideBarOverlay className="Demo-SideBarOverlay">
         {overlay}
       </SideBarOverlay>}
     </Container>

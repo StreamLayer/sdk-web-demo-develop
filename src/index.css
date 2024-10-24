@@ -101,6 +101,8 @@ button:focus-visible {
   --adv-media-shift: 24px;
   --adv-top-indent: 12px;
   --adv-sponsor-logo-size: 42px;
+  --max-notifications-width: 418px;
+  --font-color: #090e13;
 
   .PromoOverlayContainer {
     backdrop-filter: blur(2px);
@@ -165,6 +167,7 @@ button:focus-visible {
     --adv-btn-padding: 10px;
     --adv-sponsor-logo-size: 28px;
     --adv-header-height: 48px;
+    --max-notifications-width: 100%;
 
     .AdvTitle {
       margin-top: 18px;
@@ -204,9 +207,10 @@ button:focus-visible {
     .SponsorText {
       transform: scale(1);
     }
-  }
 
-  @media only screen and (max-width: 1024px) and (orientation: portrait) {
-    --header-offset: 0px;
+    /* check this style later */
+    .sl-hide-on-modal {
+      overflow-y: auto !important;
+    }
   }
 }

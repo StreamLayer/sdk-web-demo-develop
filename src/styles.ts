@@ -9,3 +9,9 @@ export const Container = styled.div`
 export const AppContainer = styled.div`
     height: calc(100% - var(--nav-bar-height));
 `
+
+export const PointsContainer = styled.div`
+    border: 1px solid rgba(255,255,255, .5);
+    border-radius: 40px;
+    backdrop-filter: blur(1px);
+`
