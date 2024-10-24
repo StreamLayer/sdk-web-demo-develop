@@ -199,6 +199,10 @@ export const ControlButton = styled.button<{ active: boolean }>`
         outline: none;
     }
 
+    &:disabled {
+        opacity: 0.5;
+    }
+
     ${({ active }) => active && `
         background: linear-gradient(99deg, rgba(255, 255, 255, 0.00) 3.5%, rgba(255, 255, 255, 0.75) 35.2%, rgba(255, 255, 255, 0.90) 48.49%, rgba(255, 255, 255, 0.75) 66.48%, rgba(255, 255, 255, 0.00) 93.48%), #1D7BFF;
         background-blend-mode: soft-light, normal;

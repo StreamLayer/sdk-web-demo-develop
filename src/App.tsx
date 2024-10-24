@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { StreamLayerProvider, ContentActivateParams, OnContentActivateCallback } from '@streamlayer/react'
 import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
@@ -10,7 +10,7 @@ import { VideoComponent } from './components/VideoComponent'
 import { SDKLayout } from './components/SDKLayout'
 import { Auth } from './components/Auth'
 
-import { AppContainer, Container } from './styles'
+import { AppContainer, Container, PointsContainer } from './styles'
 import '@streamlayer/react/style.css'
 import { EVENT_ID, SDK_KEY, PRODUCTION } from './config'
 
@@ -23,7 +23,14 @@ function App() {
   const [promo, setPromo] = useState<ContentActivateParams>()
   const [notification, setNotification] = useState(false)
   const [showApp, setShowApp] = useState(false)
+  const activeQuestionId = useRef('')
   const showPromo = promo && !notification
+
+  useEffect(() => {
+    if (!showPromo && showApp && mode === 'overlay') {
+      setMode('side-panel')
+    }
+  }, [showPromo, showApp, mode])
 
   const toggleMode = useCallback((e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent) => {
     if (e.target instanceof HTMLButtonElement) {
@@ -35,27 +42,36 @@ function App() {
     }
   }, [])
 
-  const toggleHasPromo: OnContentActivateCallback = (params) => {
-    if (params.type !== 'advertisement') {
-      return
-    }
-
-    if (params.stage === 'activate') {
-      setNotification(!!params.hasNotification)
-      setPromo(params)
+  const onContentActivate: OnContentActivateCallback = (params) => {
+    if (params.type === 'advertisement') {
+      if (params.stage === 'activate') {
+        setNotification(!!params.hasNotification)
+        setPromo(params)
+      } else {
+        setPromo(undefined)
+        setNotification(false)
+      }
     } else {
-      setPromo(undefined)
-      setNotification(false)
+      setShowApp(flag => {
+        if (!flag) {
+          if (params.stage === 'activate') {
+            activeQuestionId.current = params.id
+            return true
+          }
+        } else if (params.stage === 'deactivate' && typeof params.id === 'string' && params.id === activeQuestionId.current) {
+          activeQuestionId.current = ''
+
+          return false
+        }
+
+        return flag
+      })
+
     }
   }
 
   const showAdByNotification = () => {
     setNotification(false)
-  }
-
-  const showAppOnSidebar = () => {
-    setShowApp(true)
-    setMode('side-panel')
   }
 
   let videoContainerStyle: any = {}
@@ -74,17 +90,27 @@ function App() {
 
   return (
     <Container>
-      <NavBar mode={mode} toggleMode={toggleMode} />
-      <StreamLayerProvider plugins={plugins as any} sdkKey={SDK_KEY} production={PRODUCTION} event={EVENT_ID} onContentActivate={toggleHasPromo}>
+      <NavBar mode={mode} toggleMode={toggleMode} disabled={{ overlay: showApp }} />
+      <StreamLayerProvider plugins={plugins as any} sdkKey={SDK_KEY} production={PRODUCTION} event={EVENT_ID} onContentActivate={onContentActivate}>
         <Auth />
         <AppContainer>
           <SDKLayout
-            mode={(showPromo || showApp) ? mode : 'off'}
-            points={!promo && <div onClick={showAppOnSidebar}><StreamLayerSDKPoints /></div>}
-            sidebar={!promo && showApp ? <StreamLayerSDKReact event={EVENT_ID} /> : <StreamLayerSDKAdvertisement sidebar='right' persistent />}
+            mode={mode}
+            points={!promo && <PointsContainer><StreamLayerSDKPoints /></PointsContainer>}
+            sidebar={(
+              <>
+                <StreamLayerSDKReact theme="custom-theme" event={EVENT_ID} />
+                <StreamLayerSDKAdvertisement sidebar='right' persistent />
+              </>
+            )}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
             video={<VideoComponent />}
-            overlay={!promo && showApp ? <StreamLayerSDKReact event={EVENT_ID} /> : <StreamLayerSDKAdvertisement persistent />}
+            overlay={(
+              <>
+                <StreamLayerSDKReact theme="custom-theme" event={EVENT_ID} />
+                <StreamLayerSDKAdvertisement persistent />
+              </>
+            )}
             notification={notification && <div onClick={showAdByNotification}><StreamLayerSDKAdvertisement notification persistent /></div>}
           />
         </AppContainer>
