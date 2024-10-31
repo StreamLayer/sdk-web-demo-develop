@@ -184,8 +184,9 @@ export const Overlay = styled.div`
 
 export const Notification = styled.div`
   position: absolute;
-  bottom: 20px;
-  left: 56px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 
   ${IS_DEBUG && 'background: brown;'}
 
@@ -194,16 +195,38 @@ export const Notification = styled.div`
 
   ${breakpoints(`
       transform: scale(1);
-      left: 32px;
-      bottom: -4px;
   `)}
 
   ${breakpointsPortrait(`
       position: static;
-      margin-top: -35px;
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-top: -4px;
   `)}
+
+  .SL_Rich_Notification {
+    margin-left: 56px;
+    margin-bottom: 20px;
+
+    ${breakpoints(`
+      margin-left: 32px;
+      margin-bottom: -4px;
+    `)}
+
+  ${breakpointsPortrait(`
+        margin-top: -35px;
+        margin-left: 8px;
+        margin-right: 8px;
+    `)}
+  }
+
+  .SL_Lower_Third_Notification {
+    ${breakpointsPortrait(`
+      transform: translateY(-100%);
+    `)}
+
+    @media only screen and (max-width: 768px) and (orientation: portrait) {
+      transform: translateY(0);
+    }
+  }
 `
 
 export const PointsContainer = styled.div`
