@@ -653,9 +653,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   ${Df&&"background: brown;"}
 
-  transform: scale(1.5);
-  transform-origin: left bottom;
-
   ${Rh(`
       transform: scale(1);
   `)}
@@ -668,6 +665,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   .SL_Rich_Notification {
     margin-left: 56px;
     margin-bottom: 20px;
+
+    transform: scale(1.5);
+    transform-origin: left bottom;
 
     ${Rh(`
       margin-left: 32px;

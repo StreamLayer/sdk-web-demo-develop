@@ -190,9 +190,6 @@ export const Notification = styled.div`
 
   ${IS_DEBUG && 'background: brown;'}
 
-  transform: scale(1.5);
-  transform-origin: left bottom;
-
   ${breakpoints(`
       transform: scale(1);
   `)}
@@ -205,6 +202,9 @@ export const Notification = styled.div`
   .SL_Rich_Notification {
     margin-left: 56px;
     margin-bottom: 20px;
+
+    transform: scale(1.5);
+    transform-origin: left bottom;
 
     ${breakpoints(`
       margin-left: 32px;
