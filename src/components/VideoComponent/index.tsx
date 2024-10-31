@@ -7,7 +7,7 @@ import { FALLBACK_VIDEO } from "../../config"
 export const VideoComponent: React.FC<{ src?: string }> = ({ src = FALLBACK_VIDEO }) => {
   const videoRef = useRef() as React.RefObject<HTMLVideoElement>;
   const sdk = useStreamLayer()
-  const [streamSrc, setStreamSrc] = useState(src)
+  const [streamSrc, setStreamSrc] = useState('')
 
   useEffect(() => {
     if (sdk) {
