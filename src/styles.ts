@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { breakpoints } from './breakpoints'
 
 export const Container = styled.div`
     width: 100dvw;
@@ -8,6 +9,14 @@ export const Container = styled.div`
 
 export const AppContainer = styled.div`
     height: calc(100% - var(--nav-bar-height));
+
+    .SL-AdvertisementUIWrap {
+        font-size: 24px !important;
+
+        ${breakpoints(`
+            font-size: 16px !important;
+        `)}
+    }
 `
 
 export const PointsContainer = styled.div`

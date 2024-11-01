@@ -190,10 +190,6 @@ export const Notification = styled.div`
 
   ${IS_DEBUG && 'background: brown;'}
 
-  ${breakpoints(`
-      transform: scale(1);
-  `)}
-
   ${breakpointsPortrait(`
       position: static;
       margin-top: -4px;
@@ -203,15 +199,12 @@ export const Notification = styled.div`
     margin-left: 56px;
     margin-bottom: 20px;
 
-    transform: scale(1.5);
-    transform-origin: left bottom;
-
     ${breakpoints(`
       margin-left: 32px;
       margin-bottom: -4px;
     `)}
 
-  ${breakpointsPortrait(`
+    ${breakpointsPortrait(`
         margin-top: -35px;
         margin-left: 8px;
         margin-right: 8px;
