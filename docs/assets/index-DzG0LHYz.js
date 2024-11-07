@@ -484,7 +484,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
         }
     }
-`,hxe=({src:t=M5e})=>{const e=F.useRef(),n=tT(),[r,a]=F.useState("");return F.useEffect(()=>{if(n)return n.streamSummary().subscribe(i=>{var l;i.loading===!1&&i.error===void 0&&i.data&&a((l=i.data.summary)!=null&&l.stream?`${i.data.summary.stream}`:t)})},[n,t]),F.useEffect(()=>{if(r&&r.includes("m3u8"))if(Iu.isSupported()&&e.current){const i=new Iu({debug:!1});i.loadSource(r),i.attachMedia(e.current),i.on(Iu.Events.ERROR,()=>{a(t)})}else a(t)},[r,t]),r?I.jsx(fxe,{src:r,ref:e,muted:!0,autoPlay:!0,loop:!0,playsInline:!0}):I.jsx(mxe,{children:I.jsx("img",{src:"https://cdn.streamlayer.io/sdk-web-demo/loader.png"})})};var pxe={};const Df=pxe.SL_DEBUG==="true",gxe=xn.div`
+`,hxe=({src:t=M5e})=>{const e=F.useRef(),n=tT(),[r,a]=F.useState("");return F.useEffect(()=>{if(n)return n.streamSummary().subscribe(i=>{var l;i.loading===!1&&i.error===void 0&&i.data&&a((l=i.data.summary)!=null&&l.stream?`${i.data.summary.stream}`:t)})},[n,t]),F.useEffect(()=>{if(r&&r.includes("m3u8"))if(Iu.isSupported()&&e.current){const i=new Iu({debug:!1});i.loadSource(r),i.attachMedia(e.current),i.on(Iu.Events.ERROR,()=>{a(t)})}else a(t);e.current&&(e.current.volume=.1,e.current.play())},[r,t]),r?I.jsx(fxe,{src:r,ref:e,autoPlay:!0,loop:!0,playsInline:!0,controls:!0,controlsList:"nodownload nofullscreen noremoteplayback"}):I.jsx(mxe,{children:I.jsx("img",{src:"https://cdn.streamlayer.io/sdk-web-demo/loader.png"})})};var pxe={};const Df=pxe.SL_DEBUG==="true",gxe=xn.div`
   ${Df&&"background: green;"}
   width: 100%;
   height: 100%;

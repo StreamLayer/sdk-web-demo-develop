@@ -1,5 +1,5 @@
 import Hls from "hls.js";
-import { Preload, Video} from './styles'
+import { Preload, Video } from './styles'
 import { useEffect, useRef, useState } from 'react'
 import { useStreamLayer } from "@streamlayer/react"
 import { FALLBACK_VIDEO } from "../../config"
@@ -36,6 +36,10 @@ export const VideoComponent: React.FC<{ src?: string }> = ({ src = FALLBACK_VIDE
         setStreamSrc(src)
       }
     }
+    if (videoRef.current) {
+      videoRef.current.volume = 0.1
+      videoRef.current.play()
+    }
   }, [streamSrc, src])
 
   if (!streamSrc) {
@@ -46,10 +50,11 @@ export const VideoComponent: React.FC<{ src?: string }> = ({ src = FALLBACK_VIDE
     <Video
       src={streamSrc}
       ref={videoRef}
-      muted
       autoPlay
       loop
       playsInline
+      controls
+      controlsList="nodownload nofullscreen noremoteplayback"
     />
   )
 }
