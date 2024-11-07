@@ -1,5 +1,5 @@
 import Hls from "hls.js";
-import { Preload, Video } from './styles'
+import { Preload, Video, VideoIFrame } from './styles'
 import { useEffect, useRef, useState } from 'react'
 import { useStreamLayer } from "@streamlayer/react"
 import { FALLBACK_VIDEO } from "../../config"
@@ -44,6 +44,10 @@ export const VideoComponent: React.FC<{ src?: string }> = ({ src = FALLBACK_VIDE
 
   if (!streamSrc) {
     return <Preload><img src="https://cdn.streamlayer.io/sdk-web-demo/loader.png" /></Preload>
+  }
+
+  if (streamSrc.includes('player.castr.com')) {
+    return <VideoIFrame src={`${streamSrc}?loop=on`} width="100%" frameBorder="0" scrolling="no" allow="autoplay"></VideoIFrame>
   }
 
   return (
