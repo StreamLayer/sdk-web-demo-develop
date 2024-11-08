@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { StreamLayerProvider } from '@streamlayer/react'
+import { ContentActivateParams, StreamLayerProvider } from '@streamlayer/react'
 import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
 import { StreamLayerSDKAdvertisement } from '@streamlayer/react/advertisement'
@@ -20,6 +20,7 @@ const plugins = new Set([anonymous])
 
 function App() {
   const [mode, setMode] = useState<IMode>('side-panel')
+  const [tabs, setTabs] = useState(false)
 
   const toggleMode = useCallback((e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent) => {
     if (e.target instanceof HTMLButtonElement) {
@@ -31,14 +32,22 @@ function App() {
     }
   }, [])
 
+  const toggleNavBar = ({ stage, type }: ContentActivateParams) => {
+    if (stage === 'activate' && type === 'advertisement') {
+      setTabs(true)
+    } else {
+      setTabs(false)
+    }
+  }
+
   useEffect(() => {
     window.localStorage.clear()
   }, [])
 
   return (
     <Container>
-      <NavBar mode={mode} toggleMode={toggleMode} />
-      <StreamLayerProvider plugins={plugins} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
+      <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} />
+      <StreamLayerProvider onContentActivate={toggleNavBar} plugins={plugins} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />
         <AppContainer>
           <SDKLayout
