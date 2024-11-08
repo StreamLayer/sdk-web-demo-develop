@@ -112,6 +112,7 @@ export const VideoBox = styled.div`
 export const VideoPlayer = styled.div`
   ${IS_DEBUG && 'background: black;'}
   position: var(--video-player-position);
+  height: 100%;
   inset: 0;
 `
 

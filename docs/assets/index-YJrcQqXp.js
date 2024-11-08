@@ -491,7 +491,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
         }
     }
-`,gxe=({src:t=F5e})=>{const e=F.useRef(),n=tT(),[r,a]=F.useState("");return F.useEffect(()=>{if(n)return n.streamSummary().subscribe(i=>{var l;i.loading===!1&&i.error===void 0&&i.data&&a((l=i.data.summary)!=null&&l.stream?`${i.data.summary.stream}`:t)})},[n,t]),F.useEffect(()=>{if(r&&r.includes("m3u8"))if(Iu.isSupported()&&e.current){const i=new Iu({debug:!1});i.loadSource(r),i.attachMedia(e.current),i.on(Iu.Events.ERROR,()=>{a(t)})}else a(t);e.current&&(e.current.volume=.1,e.current.play())},[r,t]),r?r.includes("player.castr.com")?I.jsx(hxe,{src:`${r}?loop=on&controls=off`,width:"100%",frameBorder:"0",scrolling:"no",allow:"autoplay"}):I.jsx(mxe,{src:r,ref:e,autoPlay:!0,loop:!0,playsInline:!0,controls:!0,controlsList:"nodownload nofullscreen noremoteplayback"}):I.jsx(pxe,{children:I.jsx("img",{src:"https://cdn.streamlayer.io/sdk-web-demo/loader.png"})})};var yxe={};const Df=yxe.SL_DEBUG==="true",vxe=Sn.div`
+`,gxe=({src:t=F5e})=>{const e=F.useRef(),n=tT(),[r,a]=F.useState("");return F.useEffect(()=>{if(n)return n.streamSummary().subscribe(i=>{var l;i.loading===!1&&i.error===void 0&&i.data&&a((l=i.data.summary)!=null&&l.stream?`${i.data.summary.stream}`:t)})},[n,t]),F.useEffect(()=>{if(r&&r.includes("m3u8"))if(Iu.isSupported()&&e.current){const i=new Iu({debug:!1});i.loadSource(r),i.attachMedia(e.current),i.on(Iu.Events.ERROR,()=>{a(t)})}else a(t);e.current&&(e.current.volume=.1,e.current.play())},[r,t]),r?r.includes("player.castr.com")?I.jsx(hxe,{src:`${r}?loop=on&controls=off`,width:"100%",height:"100%",frameBorder:"0",scrolling:"no",allow:"autoplay"}):I.jsx(mxe,{src:r,ref:e,autoPlay:!0,loop:!0,playsInline:!0,controls:!0,controlsList:"nodownload nofullscreen noremoteplayback"}):I.jsx(pxe,{children:I.jsx("img",{src:"https://cdn.streamlayer.io/sdk-web-demo/loader.png"})})};var yxe={};const Df=yxe.SL_DEBUG==="true",vxe=Sn.div`
   ${Df&&"background: green;"}
   width: 100%;
   height: 100%;
@@ -586,6 +586,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,Cxe=Sn.div`
   ${Df&&"background: black;"}
   position: var(--video-player-position);
+  height: 100%;
   inset: 0;
 `,_xe=Sn.div`
    position: absolute;
