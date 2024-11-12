@@ -47,7 +47,7 @@ function App() {
   return (
     <Container>
       <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} />
-      <StreamLayerProvider onContentActivate={toggleNavBar} plugins={plugins} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
+      <StreamLayerProvider onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />
         <AppContainer>
           <SDKLayout
