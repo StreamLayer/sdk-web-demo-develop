@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useStreamLayer } from "@streamlayer/react"
 import { FALLBACK_VIDEO } from "../../config"
 
-export const VideoComponent: React.FC<{ src?: string }> = ({ src = FALLBACK_VIDEO }) => {
+export const VideoComponent: React.FC<{ src?: string, muted: boolean }> = ({ src = FALLBACK_VIDEO, muted }) => {
   const videoRef = useRef() as React.RefObject<HTMLVideoElement>;
   const sdk = useStreamLayer()
   const [streamSrc, setStreamSrc] = useState('')
@@ -47,13 +47,14 @@ export const VideoComponent: React.FC<{ src?: string }> = ({ src = FALLBACK_VIDE
   }
 
   if (streamSrc.includes('player.castr.com')) {
-    return <VideoIFrame src={`${streamSrc}?loop=on&controls=off`} width="100%" height="100%" frameBorder="0" scrolling="no" allow="autoplay"></VideoIFrame>
+    return <VideoIFrame src={`${streamSrc}?loop=on&fullscreen=off&airplay=off&cast=off&pip=off`} width="100%" height="100%" frameBorder="0" scrolling="no" allow="autoplay"></VideoIFrame>
   }
 
   return (
     <Video
       src={streamSrc}
       ref={videoRef}
+      muted={muted}
       autoPlay
       loop
       playsInline

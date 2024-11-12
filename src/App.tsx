@@ -21,6 +21,7 @@ const plugins = new Set([anonymous])
 function App() {
   const [mode, setMode] = useState<IMode>('side-panel')
   const [tabs, setTabs] = useState(false)
+  const [muted, setMuted] = useState(false)
 
   const toggleMode = useCallback((e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent) => {
     if (e.target instanceof HTMLButtonElement) {
@@ -40,6 +41,10 @@ function App() {
     }
   }
 
+  const videoPlayerController = ({ muted }: { muted: boolean }) => {
+    setMuted(muted)
+  }
+
   useEffect(() => {
     window.localStorage.clear()
   }, [])
@@ -47,7 +52,7 @@ function App() {
   return (
     <Container>
       <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} />
-      <StreamLayerProvider onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
+      <StreamLayerProvider videoPlayerController={videoPlayerController} onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />
         <AppContainer>
           <SDKLayout
@@ -60,7 +65,7 @@ function App() {
               </>
             )}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
-            video={<VideoComponent />}
+            video={<VideoComponent muted={muted} />}
             overlay={(
               <>
                 <StreamLayerSDKReact />
