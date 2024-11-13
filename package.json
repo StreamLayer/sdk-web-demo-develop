@@ -13,8 +13,8 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@streamlayer/react": "^1.8.1",
-    "@streamlayer/sdk-web-anonymous-auth": "^1.1.2",
+    "@streamlayer/react": "^1.8.2",
+    "@streamlayer/sdk-web-anonymous-auth": "^1.1.3",
     "hls.js": "^1.5.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
