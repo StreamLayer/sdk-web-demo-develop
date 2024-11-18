@@ -50,7 +50,7 @@ function App() {
   }, [])
 
   return (
-    <Container>
+    <Container className="app-container dark">
       <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} />
       <StreamLayerProvider videoPlayerController={videoPlayerController} onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />

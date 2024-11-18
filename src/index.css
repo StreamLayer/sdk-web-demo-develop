@@ -92,16 +92,6 @@ button:focus-visible {
   --adv-header-border: none;
   --adv-media-row-gap: auto;
   --adv-media-padding: 0;
-  /* --adv-title-font-size: 40px;
-  --adv-description-font-size: 21px;
-  --adv-description-height: 31.5px;
-  --adv-title-height: auto;
-  --adv-btn-font-size: 16px;
-  --adv-btn-padding: 17px 14px 19px 14px;
-  --adv-media-shift: 24px;
-  --adv-top-indent: 12px;
-  --adv-sponsor-logo-size: 42px;
-  --max-notifications-width: 418px; */
   --font-color: #090e13;
 
   .PromoOverlayContainer {
@@ -158,13 +148,6 @@ button:focus-visible {
   }
 
   @media only screen and (max-width: 1024px) {
-    /* --adv-title-font-size: 20px;
-    --adv-description-font-size: 16px;
-    --adv-description-height: 20px;
-    --adv-btn-font-size: 14px;
-    --adv-btn-padding: 10px;
-    --adv-sponsor-logo-size: 28px;
-    --adv-header-height: 48px; */
     --max-notifications-width: 100%;
 
     .AdvTitle {
@@ -174,13 +157,6 @@ button:focus-visible {
   }
 
   @media only screen and (max-width: 1366px) and (orientation: landscape) {
-    /* --adv-title-font-size: 20px;
-    --adv-description-font-size: 16px;
-    --adv-description-height: 20px;
-    --adv-btn-font-size: 14px;
-    --adv-btn-padding: 10px;
-    --adv-header-height: 48px; */
-
     .AdvTitle {
       margin-top: 18px;
       margin-bottom: 4px;
@@ -194,5 +170,34 @@ button:focus-visible {
     .sl-hide-on-modal {
       overflow-y: auto !important;
     }
+  }
+}
+
+.app-container.dark {
+  background-color: #1A2D40;
+
+  .StreamLayerSDK > .StreamLayerSDKTheme > .custom-theme {
+    --nav-border: none;
+    --card-border: none;
+    --color-sdk-container-bg: transparent;
+    --color-sdk-white-container-bg: transparent;
+    --color-tabs-color: #fff;
+    --color-tabs-active-color: #fff;
+    --color-tabs-container-bg: #314153;
+    --color-tabs-active-bg: #1d7bff;
+    --color-sdk-dark-container-bg: rgba(255, 255, 255, 0.1);
+    --color-primary-text: #fff;
+    --color-secondary-text: rgba(255, 255, 255, 0.7);
+    --color-primary-bg: #1a2d40;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-skeleton-color-1: rgba(255, 255, 255, 0.1);
+    --color-skeleton-color-2: rgba(255, 255, 255, 0.05);
+
+    --color-vote-btn-bg: rgba(255, 255, 255, 0.1);
+    --color-vote-btn-border: rgba(255, 255, 255, 0.1);
+    --color-vote-btn-selected-bg: rgba(29, 123, 255, 0.3);
+    --color-vote-btn-selected-border: #1d7bff;
+    --color-vote-btn-not-selected-bg: transparent;
+    --color-vote-btn-not-selected-border: rgba(255, 255, 255, 0.1);
   }
 }
