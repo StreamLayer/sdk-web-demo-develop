@@ -1,10 +1,19 @@
-import { IMode } from "../../App"
+import { IMode, ITheme } from "../../App"
 import { STUDIO_LINK } from "../../config"
 import { ControlButton, Controls, ControlsSelector, ControlsSelectorContainer, LinkToStudio, Logo, NavBarContainer, ShowMenuBtn } from "./styles"
 
-type NavBarProps = { tabs: boolean, mode: IMode, disabled?: Partial<Record<IMode, boolean | undefined>>, toggleMode: (e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent ) => void }
+type NavBarProps = {
+    tabs: boolean,
+    mode: IMode,
+    theme: ITheme,
+    disabled?: Partial<Record<IMode, boolean | undefined>>,
+    toggleTheme: (e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent ) => void,
+    toggleMode: (e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent ) => void
+}
 
-export const NavBar: React.FC<NavBarProps> = ({ mode, tabs, toggleMode, disabled }) => {
+const debugTheme = window.localStorage.getItem('with-theme')
+
+export const NavBar: React.FC<NavBarProps> = ({ mode, theme, tabs, toggleMode, toggleTheme, disabled }) => {
     return (
         <NavBarContainer className="NavBarContainer">
             <Logo src="https://cdn.streamlayer.io/sdk-web-demo/sl-logo.png"/>
@@ -18,6 +27,14 @@ export const NavBar: React.FC<NavBarProps> = ({ mode, tabs, toggleMode, disabled
                     <option value='side-panel' selected={mode==='side-panel'}>Side Panel</option>
                     <option value='l-bar' selected={mode==='l-bar'}>L-Bar</option>
                     <option value='overlay' selected={mode==='overlay'} disabled={disabled?.overlay}>Overlay</option>
+                </ControlsSelector>
+                <label htmlFor="select-mode" />
+            </ControlsSelectorContainer>}
+            {!!debugTheme && <ControlsSelectorContainer style={{ display: 'block' }}>
+                <ControlsSelector style={{ display: 'flex' }} id="select-theme" onChange={toggleTheme}>
+                    <option value='light' selected={theme==='light'}>Light</option>
+                    <option value='dark' selected={theme==='dark'}>Dark</option>
+                    <option value='tgl' selected={theme==='tgl'}>TGL</option>
                 </ControlsSelector>
                 <label htmlFor="select-mode" />
             </ControlsSelectorContainer>}

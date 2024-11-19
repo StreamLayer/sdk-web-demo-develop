@@ -4,6 +4,7 @@ import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
 import { StreamLayerSDKAdvertisement } from '@streamlayer/react/advertisement'
 import { anonymous } from '@streamlayer/sdk-web-anonymous-auth'
+import { cx } from '@emotion/css'
 
 import { NavBar } from './components/NavBar'
 import { VideoComponent } from './components/VideoComponent'
@@ -15,11 +16,13 @@ import '@streamlayer/react/style.css'
 import { EVENT_ID, SDK_KEY, PRODUCTION } from './config'
 
 export type IMode = 'side-panel' | 'l-bar' | 'overlay' | 'off'
+export type ITheme = 'light' | 'dark' | 'tgl'
 
 const plugins = new Set([anonymous])
 
 function App() {
   const [mode, setMode] = useState<IMode>('side-panel')
+  const [theme, setTheme] = useState<ITheme>('dark')
   const [tabs, setTabs] = useState(false)
   const [muted, setMuted] = useState(false)
 
@@ -30,6 +33,16 @@ function App() {
 
     if (e.target instanceof HTMLSelectElement) {
       setMode(e.target.value as IMode)
+    }
+  }, [])
+
+  const toggleTheme = useCallback((e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent) => {
+    if (e.target instanceof HTMLButtonElement) {
+      setTheme(e.target.name as ITheme)
+    }
+
+    if (e.target instanceof HTMLSelectElement) {
+      setTheme(e.target.value as ITheme)
     }
   }, [])
 
@@ -46,12 +59,16 @@ function App() {
   }
 
   useEffect(() => {
+    const withTheme = window.localStorage.getItem('with-theme')
     window.localStorage.clear()
+    if (withTheme) {
+      window.localStorage.setItem('with-theme', withTheme)
+    }
   }, [])
 
   return (
-    <Container className="app-container dark">
-      <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} />
+    <Container className={cx('app-container', theme)}>
+      <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} theme={theme} toggleTheme={toggleTheme} />
       <StreamLayerProvider videoPlayerController={videoPlayerController} onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />
         <AppContainer>
