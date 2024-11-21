@@ -10,9 +10,10 @@ type SDKLayoutProps = {
   overlay?: React.ReactNode
   notification?: React.ReactNode
   points?: React.ReactNode
+  interacted: boolean
 }
 
-export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, overlay, notification, banner, video }) => {
+export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, sidebar, overlay, notification, banner, video }) => {
   const uiState = useStreamLayerUI()
 
   const videoContainerRef = useRef<HTMLDivElement>(null)
@@ -60,11 +61,17 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, points, sidebar, ove
 
   useEffect(updateAspectRatio)
 
-  const hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.appNotification || uiState.promotionSidebar)
-  const hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
+  let hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.appNotification || uiState.promotionSidebar)
+  let hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
   const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner)
   const hasPromotionNotification = uiState.promotionNotification
-  const hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
+  let hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
+
+  if (!interacted && uiState.promotionExternalAd) {
+    hasSidebar = false
+    hasOverlay = false
+    hasPromotion = false
+  }
 
   return (
     <Container className="Container">

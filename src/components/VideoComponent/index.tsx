@@ -1,13 +1,14 @@
 import Hls from "hls.js";
-import { Preload, Video, VideoIFrame } from './styles'
+import { Preload, Video, VideoIFrame, InteractNote } from './styles'
 import { useEffect, useRef, useState } from 'react'
 import { useStreamLayer } from "@streamlayer/react"
 import { FALLBACK_VIDEO } from "../../config"
 
-export const VideoComponent: React.FC<{ src?: string, muted: boolean }> = ({ src = FALLBACK_VIDEO, muted }) => {
+export const VideoComponent: React.FC<{ src?: string, muted: boolean, interacted: boolean }> = ({ src = FALLBACK_VIDEO, interacted, muted }) => {
   const videoRef = useRef() as React.RefObject<HTMLVideoElement>;
   const sdk = useStreamLayer()
   const [streamSrc, setStreamSrc] = useState('')
+  const [errOnPlay, setErrOnPlay] = useState(false)
 
   useEffect(() => {
     if (sdk) {
@@ -38,9 +39,18 @@ export const VideoComponent: React.FC<{ src?: string, muted: boolean }> = ({ src
     }
     if (videoRef.current) {
       videoRef.current.volume = 0.1
-      videoRef.current.play()
+      videoRef.current.play().catch(err => {
+        console.log(err)
+        setErrOnPlay(true)
+      })
     }
   }, [streamSrc, src])
+
+  useEffect(() => {
+    if (interacted && errOnPlay) {
+      videoRef.current?.play()
+    }
+  }, [interacted, errOnPlay])
 
   if (!streamSrc) {
     return <Preload><img src="https://cdn.streamlayer.io/sdk-web-demo/loader.png" /></Preload>
@@ -51,15 +61,18 @@ export const VideoComponent: React.FC<{ src?: string, muted: boolean }> = ({ src
   }
 
   return (
-    <Video
-      src={streamSrc}
-      ref={videoRef}
-      muted={muted}
-      autoPlay
-      loop
-      playsInline
-      controls
-      controlsList="nodownload nofullscreen noremoteplayback"
-    />
+    <>
+      <Video
+        src={streamSrc}
+        ref={videoRef}
+        muted={muted}
+        autoPlay
+        loop
+        playsInline
+        controls
+        controlsList="nodownload nofullscreen noremoteplayback"
+      />
+      {!interacted && errOnPlay && <InteractNote>Click to start</InteractNote>}
+    </>
   )
 }

@@ -25,6 +25,7 @@ function App() {
   const [theme, setTheme] = useState<ITheme>('dark')
   const [tabs, setTabs] = useState(false)
   const [muted, setMuted] = useState(false)
+  const [interacted, setInteracted] = useState(false)
 
   const toggleMode = useCallback((e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent) => {
     if (e.target instanceof HTMLButtonElement) {
@@ -67,26 +68,29 @@ function App() {
   }, [])
 
   return (
-    <Container className={cx('app-container', theme)}>
+    <Container className={cx('app-container', theme)} onClick={() => setInteracted(true)}>
       <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} theme={theme} toggleTheme={toggleTheme} />
       <StreamLayerProvider videoPlayerController={videoPlayerController} onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />
         <AppContainer>
           <SDKLayout
             mode={mode}
+            interacted={interacted}
             points={<PointsContainer><StreamLayerSDKPoints /></PointsContainer>}
             sidebar={(
               <>
                 <StreamLayerSDKReact />
                 <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck />
+                {interacted && <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck externalAd />}
               </>
             )}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
-            video={<VideoComponent muted={muted} />}
+            video={<VideoComponent muted={muted} interacted={interacted} />}
             overlay={(
               <>
                 <StreamLayerSDKReact />
                 <StreamLayerSDKAdvertisement persistent skipTypeCheck />
+                {interacted && <StreamLayerSDKAdvertisement persistent skipTypeCheck externalAd />}
               </>
             )}
             notification={<StreamLayerSDKAdvertisement notification persistent />}

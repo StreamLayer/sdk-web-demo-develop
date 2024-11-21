@@ -37,3 +37,15 @@ export const Preload = styled.div`
         }
     }
 `
+
+export const InteractNote = styled.div`
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(1px);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
