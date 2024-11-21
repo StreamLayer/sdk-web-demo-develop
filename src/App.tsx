@@ -56,6 +56,7 @@ function App() {
   }
 
   const videoPlayerController = ({ muted }: { muted: boolean }) => {
+    console.log('videoPlayerController', muted)
     setMuted(muted)
   }
 
@@ -85,7 +86,7 @@ function App() {
               </>
             )}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
-            video={<VideoComponent muted={muted} interacted={interacted} />}
+            video={<VideoComponent setInteracted={setInteracted} muted={muted} interacted={interacted} />}
             overlay={(
               <>
                 <StreamLayerSDKReact />

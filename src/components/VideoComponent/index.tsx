@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { useStreamLayer } from "@streamlayer/react"
 import { FALLBACK_VIDEO } from "../../config"
 
-export const VideoComponent: React.FC<{ src?: string, muted: boolean, interacted: boolean }> = ({ src = FALLBACK_VIDEO, interacted, muted }) => {
+export const VideoComponent: React.FC<{ src?: string, muted: boolean, interacted: boolean, setInteracted: (interacted: boolean) => void
+}> = ({ src = FALLBACK_VIDEO, interacted, setInteracted, muted }) => {
   const videoRef = useRef() as React.RefObject<HTMLVideoElement>;
   const sdk = useStreamLayer()
   const [streamSrc, setStreamSrc] = useState('')
@@ -39,8 +40,7 @@ export const VideoComponent: React.FC<{ src?: string, muted: boolean, interacted
     }
     if (videoRef.current) {
       videoRef.current.volume = 0.1
-      videoRef.current.play().catch(err => {
-        console.log(err)
+      videoRef.current.play().then(() => setInteracted(true)).catch(() => {
         setErrOnPlay(true)
       })
     }
