@@ -201,6 +201,7 @@ button:focus-visible {
     --summary-container-padding-bottom: 0px;
     --font-header-title: 1.125rem;
     --close-icon-size: 1.125rem;
+    --max-notifications-width: 100%;
   }
 }
 
