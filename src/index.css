@@ -202,6 +202,20 @@ button:focus-visible {
     --font-header-title: 1.125rem;
     --close-icon-size: 1.125rem;
     --max-notifications-width: 100%;
+
+    --color-sdk-dark-container-bg: rgba(255, 255, 255, 0.1);
+    --color-sdk-prediction-result-success-bg: #01ab58;
+    --color-sdk-prediction-result-incorrect-bg: #da3732;
+    --color-sdk-prediction-result-success-text: #fff;
+    --color-sdk-prediction-result-error-title: #fff;
+    --color-sdk-prediction-result-error-subtitle: #fff;
+    --color-sdk-prediction-result-close-icon: #fff;
+    --color-sdk-prediction-feedback-success-icon: #fff;
+    --color-sdk-prediction-feedback-incorrect-rect1: #fff;
+    --color-sdk-prediction-feedback-incorrect-rect2: #cd2525;
+
+    --color-success: #00bd60;
+    --color-unsuccess: #df2f3b;
   }
 }
 
