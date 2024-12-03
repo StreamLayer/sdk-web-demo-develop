@@ -219,6 +219,9 @@ button:focus-visible {
 
     --color-prediction-bg-lines-correct: #fff;
     --color-prediction-bg-lines-incorrect: #fff;
+
+    --welcome-screen-graphic-size: 144px;
+    --welcome-screen-graphic-size-xl: 144px;
   }
 }
 
