@@ -216,6 +216,9 @@ button:focus-visible {
 
     --color-success: #00bd60;
     --color-unsuccess: #df2f3b;
+
+    --color-prediction-bg-lines-correct: #fff;
+    --color-prediction-bg-lines-incorrect: #fff;
   }
 }
 
