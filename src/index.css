@@ -196,7 +196,7 @@ button:focus-visible {
     --color-vote-btn-border: rgba(255, 255, 255, 0.1);
     --color-vote-btn-selected-bg: rgba(29, 123, 255, 0.3);
     --color-vote-btn-selected-border: #1d7bff;
-    --color-vote-btn-not-selected-bg: transparent;
+    --color-vote-btn-not-selected-bg: rgba(255, 255, 255, 0.1);
     --color-vote-btn-not-selected-border: rgba(255, 255, 255, 0.1);
     --summary-container-padding-bottom: 0px;
     --font-header-title: 1.125rem;
