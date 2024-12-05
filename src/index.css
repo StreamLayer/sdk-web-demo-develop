@@ -199,8 +199,6 @@ button:focus-visible {
     --color-vote-btn-not-selected-bg: rgba(255, 255, 255, 0.1);
     --color-vote-btn-not-selected-border: rgba(255, 255, 255, 0.1);
     --summary-container-padding-bottom: 0px;
-    --font-header-title: 1.125rem;
-    --close-icon-size: 1.125rem;
     --max-notifications-width: 100%;
 
     --color-sdk-dark-container-bg: rgba(255, 255, 255, 0.1);
@@ -220,8 +218,7 @@ button:focus-visible {
     --color-prediction-bg-lines-correct: #fff;
     --color-prediction-bg-lines-incorrect: #fff;
 
-    --welcome-screen-graphic-size: 144px;
-    --welcome-screen-graphic-size-xl: 144px;
+    --tabs-padding-top: 0px;
   }
 }
 
