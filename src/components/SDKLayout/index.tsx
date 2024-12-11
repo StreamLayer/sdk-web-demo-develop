@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react'
-import { Banner, Container, Notification, PointsContainer, ContentContainer, Overlay, Sidebar, SideBarOverlay, VideoBox, VideoContainer, VideoPlayer } from './styles'
-import { useStreamLayerUI } from '@streamlayer/react'
+import { Banner, Container, Notification, PointsContainer, ContentContainer, Overlay, Sidebar, SideBarOverlay, VideoBox, VideoContainer, VideoPlayer, InApp } from './styles'
+import { useStreamLayerUI, StreamLayerSDKNotification } from '@streamlayer/react'
 
 type SDKLayoutProps = {
   mode: 'side-panel' | 'l-bar' | 'overlay' | 'off'
@@ -84,6 +84,7 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
           <VideoBox ref={videoBoxRef} className="VideoBox">
             <VideoPlayer className="VideoPlayer">{video}</VideoPlayer>
             {!hasPromotion && <PointsContainer>{points}</PointsContainer>}
+            {<InApp><StreamLayerSDKNotification /></InApp>}
           </VideoBox>
         </VideoContainer>
         <Banner className="Banner" style={{
