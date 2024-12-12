@@ -48,6 +48,7 @@ function App() {
   }, [])
 
   const toggleNavBar = ({ stage, type }: ContentActivateParams) => {
+    console.log('onContentActivate', { stage, type })
     if (stage === 'activate' && type === 'advertisement') {
       setTabs(true)
     } else {
