@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { ContentActivateParams, StreamLayerProvider } from '@streamlayer/react'
+import { ContentActivateParams, StreamLayerProvider, StreamLayerSDKNotification } from '@streamlayer/react'
 import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
 import { StreamLayerSDKAdvertisement } from '@streamlayer/react/advertisement'
@@ -80,7 +80,7 @@ function App() {
             points={<PointsContainer><StreamLayerSDKPoints /></PointsContainer>}
             sidebar={(
               <>
-                <StreamLayerSDKReact />
+                <StreamLayerSDKReact withSidebarNotification={false} />
                 <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck />
                 {interacted && <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck externalAd />}
               </>
@@ -89,12 +89,13 @@ function App() {
             video={<VideoComponent setInteracted={setInteracted} muted={muted} interacted={interacted} />}
             overlay={(
               <>
-                <StreamLayerSDKReact />
+                <StreamLayerSDKReact withSidebarNotification={false} />
                 <StreamLayerSDKAdvertisement persistent skipTypeCheck />
                 {interacted && <StreamLayerSDKAdvertisement persistent skipTypeCheck externalAd />}
               </>
             )}
-            notification={<StreamLayerSDKAdvertisement notification persistent />}
+            appNotification={<StreamLayerSDKNotification />}
+            adNotification={<StreamLayerSDKAdvertisement notification persistent />}
           />
         </AppContainer>
       </StreamLayerProvider>

@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Banner, Container, Notification, PointsContainer, ContentContainer, Overlay, Sidebar, SideBarOverlay, VideoBox, VideoContainer, VideoPlayer, InApp } from './styles'
-import { useStreamLayerUI, StreamLayerSDKNotification } from '@streamlayer/react'
+import { useStreamLayerUI } from '@streamlayer/react'
+import throttle from 'lodash.throttle'
 
 type SDKLayoutProps = {
   mode: 'side-panel' | 'l-bar' | 'overlay' | 'off'
@@ -8,12 +9,36 @@ type SDKLayoutProps = {
   banner?: React.ReactNode
   video?: React.ReactNode
   overlay?: React.ReactNode
-  notification?: React.ReactNode
+  appNotification?: React.ReactNode
+  adNotification?: React.ReactNode
   points?: React.ReactNode
   interacted: boolean
 }
 
-export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, sidebar, overlay, notification, banner, video }) => {
+const useResponsive = () => {
+  const [store, setStore] = useState<'desktop' | 'mobile'>('desktop')
+
+  useEffect(() => {
+    const updateScreenSize = throttle(() => {
+      const screenWidth = window.innerWidth
+      const screenHeight = window.innerHeight
+
+      const orientation = screenWidth > screenHeight ? 'landscape' : 'portrait'
+
+      setStore(screenWidth < 1024 && orientation === 'portrait' ? 'mobile' : 'desktop')
+    }, 200)
+
+    window.addEventListener('resize', updateScreenSize)
+
+    return () => {
+      window.removeEventListener('resize', updateScreenSize)
+    }
+  }, [])
+
+  return store
+}
+
+export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, sidebar, overlay, appNotification, adNotification, banner, video }) => {
   const uiState = useStreamLayerUI()
 
   const videoContainerRef = useRef<HTMLDivElement>(null)
@@ -61,10 +86,13 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
 
   useEffect(updateAspectRatio)
 
-  let hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.appNotification || uiState.promotionSidebar)
+  const layoutType = useResponsive()
+
+  let hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.promotionSidebar)
   let hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
   const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner)
   const hasPromotionNotification = uiState.promotionNotification
+  const hasAppNotification = uiState.appNotification
   let hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
 
   if (!interacted && uiState.promotionExternalAd) {
@@ -84,7 +112,7 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
           <VideoBox ref={videoBoxRef} className="VideoBox">
             <VideoPlayer className="VideoPlayer">{video}</VideoPlayer>
             {!hasPromotion && <PointsContainer>{points}</PointsContainer>}
-            {<InApp><StreamLayerSDKNotification /></InApp>}
+            {hasAppNotification && appNotification && <InApp>{appNotification}</InApp>}
           </VideoBox>
         </VideoContainer>
         <Banner className="Banner" style={{
@@ -93,13 +121,13 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
         }}>
           {hasBanner && banner}
         </Banner>
-        {hasPromotionNotification && notification && <Notification>{notification}</Notification>}
-        {hasOverlay && <Overlay className="Overlay">{overlay}</Overlay>}
+        {hasPromotionNotification && adNotification && <Notification>{adNotification}</Notification>}
+        {hasOverlay && layoutType === 'desktop' && <Overlay className="Overlay">{overlay}</Overlay>}
       </ContentContainer>
-      <Sidebar style={{ width: hasSidebar ? 'var(--sidebar-width)' : '0px' }} className="Sidebar">
+      {layoutType === 'desktop' && <Sidebar style={{ width: hasSidebar ? 'var(--sidebar-width)' : '0px' }} className="Sidebar">
         {hasSidebar && sidebar}
-      </Sidebar>
-      {(hasSidebar || hasOverlay) && <SideBarOverlay className="Demo-SideBarOverlay">
+      </Sidebar>}
+      {(hasSidebar || hasOverlay) && layoutType === 'mobile' && <SideBarOverlay className="Demo-SideBarOverlay">
         {overlay}
       </SideBarOverlay>}
     </Container>

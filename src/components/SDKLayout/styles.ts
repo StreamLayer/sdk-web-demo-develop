@@ -58,31 +58,23 @@ export const Sidebar = styled.div`
   overflow: hidden;
 
   transition: width .5s ease;
-
-  ${breakpointsPortrait(`
-    display: none;
-  `)}
 `
 
 export const SideBarOverlay = styled.div`
   ${IS_DEBUG && 'background: purple;'}
-  display: none;
   margin: auto;
+  width: 100%;
+  max-width: 450px;
+  display: block;
 
-  ${breakpointsPortrait(`
-      width: 100%;
-      max-width: 450px;
-      display: block;
-
-      @keyframes grow-in-sidebar {
-          from {
-              max-width: 0px;
-          }
-          to {
-              max-width: 450px;
-          }
+  @keyframes grow-in-sidebar {
+      from {
+          max-width: 0px;
       }
-  `)}
+      to {
+          max-width: 450px;
+      }
+  }
 `
 
 export const Banner = styled.div`
@@ -176,10 +168,6 @@ export const Overlay = styled.div`
         max-height: min(377px, calc(100dvh - 16px));
         left: 16px;
         bottom: 8px;
-    `)}
-
-    ${breakpointsPortrait(`
-        display: none;
     `)}
 `
 
