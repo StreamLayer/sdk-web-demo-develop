@@ -261,5 +261,7 @@ button:focus-visible {
     --color-primary-text: #fff;
     --color-secondary-text: rgba(255, 255, 255, 0.7);
     --color-border: rgba(255, 255, 255, 0.1);
+    --adv-top-indent: 12px;
+    --adv-media-shift: 24px;
   }
 }
