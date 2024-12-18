@@ -175,51 +175,6 @@ button:focus-visible {
 
 .app-container.dark {
   background-color: #1A2D40;
-
-  .StreamLayerSDK > .StreamLayerSDKTheme > .custom-theme {
-    --nav-border: none;
-    --card-border: none;
-    --color-sdk-container-bg: #1a2d40;
-    --color-sdk-white-container-bg: #1a2d40;
-    --color-tabs-color: #fff;
-    --color-tabs-active-color: #fff;
-    --color-tabs-container-bg: #314153;
-    --color-tabs-active-bg: #1d7bff;
-    --color-sdk-dark-container-bg: rgba(255, 255, 255, 0.1);
-    --color-sdk-prediction-result-success-bg: #01ab58;
-    --color-sdk-prediction-result-incorrect-bg: #da3732;
-    --color-sdk-prediction-result-success-text: #fff;
-    --color-sdk-prediction-result-error-title: #fff;
-    --color-sdk-prediction-result-error-subtitle: #fff;
-    --color-sdk-prediction-result-close-icon: #fff;
-    --color-sdk-prediction-feedback-success-icon: #fff;
-    --color-sdk-prediction-feedback-incorrect-rect1: #fff;
-    --color-sdk-prediction-feedback-incorrect-rect2: #cd2525;
-    --color-prediction-bg-lines-correct: #fff;
-    --color-prediction-bg-lines-incorrect: #fff;
-    --color-primary-text: #fff;
-    --color-secondary-text: rgba(255, 255, 255, 0.7);
-    --color-border: rgba(255, 255, 255, 0.1);
-    --color-skeleton-color-1: rgba(255, 255, 255, 0.1);
-    --color-skeleton-color-2: rgba(255, 255, 255, 0.05);
-    --color-question-type-icon: #fff;
-
-    --color-vote-btn-bg: rgba(255, 255, 255, 0.1);
-    --color-vote-btn-border: rgba(255, 255, 255, 0.1);
-    --color-vote-btn-selected-bg: rgba(29, 123, 255, 0.3);
-    --color-vote-btn-selected-border: #1d7bff;
-    --color-vote-btn-not-selected-bg: rgba(255, 255, 255, 0.1);
-    --color-vote-btn-not-selected-border: rgba(255, 255, 255, 0.1);
-    --color-vote-btn-not-selected-bg-unset: rgba(255, 255, 255, 0.1);
-    --color-voted-answer-bg: #1d7bff;
-    --color-voted-btn-rct-bg: rgba(29, 123, 255, 0.3);
-
-    --color-success: #00bd60;
-    --color-unsuccess: #df2f3b;
-
-    --summary-container-padding-bottom: 0px;
-    --tabs-padding-top: 0px;
-  }
 }
 
 .app-container.tgl {
