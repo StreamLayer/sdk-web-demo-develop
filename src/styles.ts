@@ -20,7 +20,5 @@ export const AppContainer = styled.div`
 `
 
 export const PointsContainer = styled.div`
-    border: 1px solid rgba(255,255,255, .5);
-    border-radius: 40px;
     backdrop-filter: blur(1px);
 `
