@@ -218,5 +218,9 @@ button:focus-visible {
     --color-border: rgba(255, 255, 255, 0.1);
     --adv-top-indent: 12px;
     --adv-media-shift: 24px;
+
+    .PromoSponsorLogo {
+      border-radius: 6px;
+    }
   }
 }
