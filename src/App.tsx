@@ -64,7 +64,7 @@ function App() {
   useEffect(() => {
     const withTheme = window.localStorage.getItem('with-theme')
     const withDebug = window.localStorage.getItem('SL_DEBUG')
-    window.localStorage.clear()
+    // window.localStorage.clear()
     if (withTheme) {
       window.localStorage.setItem('with-theme', withTheme)
     }
