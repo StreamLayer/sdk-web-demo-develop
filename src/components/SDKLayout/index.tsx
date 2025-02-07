@@ -91,8 +91,8 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
   let hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.promotionSidebar)
   let hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
   const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner)
-  const hasPromotionNotification = uiState.promotionNotification
-  const hasAppNotification = uiState.appNotification
+  const hasPromotionNotification = uiState.promotionNotification && !uiState.onboardingNotification
+  const hasAppNotification = uiState.appNotification || uiState.onboardingNotification
   let hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
 
   if (!interacted && uiState.promotionExternalAd) {
