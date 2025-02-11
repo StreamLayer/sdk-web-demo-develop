@@ -13,7 +13,7 @@ export const VideoComponent: React.FC<{ src?: string, muted: boolean, interacted
 
   useEffect(() => {
     if (sdk) {
-      return sdk.streamSummary().subscribe((value) => {
+      return sdk.streamSummary().subscribe((value: any) => {
         if (value.loading === false && value.error === undefined && value.data) {
           setStreamSrc(value.data.summary?.stream ? `${value.data.summary.stream}` : src)
         }
