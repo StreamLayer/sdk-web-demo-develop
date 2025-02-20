@@ -38,19 +38,6 @@ export const VideoComponent: React.FC<{ muted: boolean, interacted: boolean, set
 
         hls.loadSource(streamSrc);
         hls.attachMedia(videoRef.current)
-
-        hls.on(Hls.Events.ERROR, () => {
-          setStreamSrc('')
-
-          if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current)
-          }
-
-          timeoutRef.current = setTimeout(() => {
-            console.log('stream retrying...', streamSrc)
-            setStreamSrc(streamSrc)
-          }, 1000)
-        });
       } else {
         setStreamSrc('')
       }
