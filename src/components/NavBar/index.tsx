@@ -18,13 +18,13 @@ export const NavBar: React.FC<NavBarProps> = ({ mode, theme, tabs, toggleMode, t
         <NavBarContainer className="NavBarContainer">
             <Logo src="https://cdn.streamlayer.io/sdk-web-demo/sl-logo.png"/>
             {tabs && <Controls onClick={toggleMode}>
-                <ControlButton active={mode==='side-panel'} name='side-panel'>Side Panel</ControlButton>
+                <ControlButton active={mode==='side-panel'} name='side-panel'>Sidebar</ControlButton>
                 <ControlButton active={mode==='l-bar'} name='l-bar'>L-Bar</ControlButton>
                 <ControlButton active={mode==='overlay'} disabled={disabled?.overlay} name='overlay'>Overlay</ControlButton>
             </Controls>}
             {tabs && <ControlsSelectorContainer>
                 <ControlsSelector id="select-mode" onChange={toggleMode}>
-                    <option value='side-panel' selected={mode==='side-panel'}>Side Panel</option>
+                    <option value='side-panel' selected={mode==='side-panel'}>Sidebar</option>
                     <option value='l-bar' selected={mode==='l-bar'}>L-Bar</option>
                     <option value='overlay' selected={mode==='overlay'} disabled={disabled?.overlay}>Overlay</option>
                 </ControlsSelector>
