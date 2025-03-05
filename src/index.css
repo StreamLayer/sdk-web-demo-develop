@@ -92,6 +92,7 @@ button:focus-visible {
   --adv-header-border: none;
   --adv-media-row-gap: auto;
   --adv-media-padding: 0;
+  --adv-top-indent: 0;
   --font-color: #090e13;
 
   .PromoOverlayContainer {
