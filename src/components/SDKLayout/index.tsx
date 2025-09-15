@@ -28,6 +28,8 @@ const useResponsive = () => {
       setStore(screenWidth < 1024 && orientation === 'portrait' ? 'mobile' : 'desktop')
     }, 200)
 
+    updateScreenSize()
+
     window.addEventListener('resize', updateScreenSize)
 
     return () => {
@@ -102,7 +104,7 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
   }
 
   return (
-    <Container className="Container">
+    <Container id={(hasSidebar || hasOverlay) && layoutType === 'mobile' ? undefined : 'SLDemoContainer'} className="Container">
       <ContentContainer className="ContentContainer" style={{
         width: hasSidebar ? 'calc(100% - var(--sidebar-width))' : '100%',
       }}>
@@ -127,7 +129,7 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
       {layoutType === 'desktop' && <Sidebar style={{ width: hasSidebar ? 'var(--sidebar-width)' : '0px' }} className="Sidebar">
         {hasSidebar && sidebar}
       </Sidebar>}
-      {(hasSidebar || hasOverlay) && layoutType === 'mobile' && <SideBarOverlay className="Demo-SideBarOverlay">
+      {(hasSidebar || hasOverlay) && layoutType === 'mobile' && <SideBarOverlay id='SLDemoContainer' className="Demo-SideBarOverlay">
         {overlay}
       </SideBarOverlay>}
     </Container>

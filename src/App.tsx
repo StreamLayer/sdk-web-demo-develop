@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { ContentActivateParams, StreamLayerProvider, StreamLayerSDKNotification } from '@streamlayer/react'
 import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
@@ -26,7 +26,6 @@ function App() {
   const [tabs, setTabs] = useState(false)
   const [muted, setMuted] = useState(false)
   const [interacted, setInteracted] = useState(false)
-  const ref = useRef(null)
 
   const toggleMode = useCallback((e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent) => {
     if (e.target instanceof HTMLButtonElement) {
@@ -77,9 +76,9 @@ function App() {
   return (
     <Container className={cx('app-container', theme)} onClick={() => setInteracted(true)}>
       <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} theme={theme} toggleTheme={toggleTheme} />
-      <StreamLayerProvider containerRef={ref} themeMode={theme === 'dark' ? 'dark' : 'light'} videoPlayerController={videoPlayerController} onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
+      <StreamLayerProvider containerId="SLDemoContainer" themeMode={theme === 'dark' ? 'dark' : 'light'} videoPlayerController={videoPlayerController} onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />
-        <AppContainer ref={ref}>
+        <AppContainer>
           <SDKLayout
             mode={mode}
             interacted={interacted}

@@ -66,6 +66,8 @@ export const SideBarOverlay = styled.div`
   width: 100%;
   max-width: 450px;
   display: block;
+  padding: 10px;
+  box-sizing: border-box;
 
   @keyframes grow-in-sidebar {
       from {
