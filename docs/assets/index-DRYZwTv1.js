@@ -98,6 +98,7 @@ Error generating stack: `+i.message+`
     transition: none;
   }
 `,jfe=({containerId:t="SlLayoutContainer",url:e})=>`
+  #${t||"SlLayoutContainer"},
   #${t||"SlLayoutContainer"} .StreamLayerSDK>.StreamLayerSDKTheme > * {
     --color-sdk-container-bg: transparent !important;
   }
