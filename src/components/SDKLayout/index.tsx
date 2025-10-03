@@ -90,9 +90,9 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
 
   const layoutType = useResponsive()
 
-  let hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.promotionSidebar)
-  let hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar)
-  const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner)
+  let hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.promotionSidebar || uiState.appSidebar)
+  let hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar || uiState.appSidebar)
+  const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner || uiState.appBanner)
   const hasPromotionNotification = uiState.promotionNotification && !uiState.onboardingNotification
   const hasAppNotification = uiState.appNotification || uiState.onboardingNotification
   let hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
