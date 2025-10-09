@@ -86,7 +86,7 @@ function App() {
             sidebar={(
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
-                <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck />
+                <StreamLayerSDKAdvertisement sidebar='right' muted={muted} persistent skipTypeCheck />
                 {interacted && <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck externalAd />}
               </>
             )}
@@ -95,8 +95,8 @@ function App() {
             overlay={(
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
-                <StreamLayerSDKAdvertisement persistent skipTypeCheck />
-                {interacted && <StreamLayerSDKAdvertisement persistent skipTypeCheck externalAd />}
+                <StreamLayerSDKAdvertisement muted={muted} persistent skipTypeCheck />
+                {interacted && <StreamLayerSDKAdvertisement muted={muted} persistent skipTypeCheck externalAd />}
               </>
             )}
             appNotification={<StreamLayerSDKNotification />}
