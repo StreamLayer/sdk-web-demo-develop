@@ -86,17 +86,17 @@ function App() {
             sidebar={(
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
-                <StreamLayerSDKAdvertisement sidebar='right' muted={muted} persistent skipTypeCheck />
+                <StreamLayerSDKAdvertisement sidebar='right' muted={!muted} persistent skipTypeCheck />
                 {interacted && <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck externalAd />}
               </>
             )}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
-            video={<VideoComponent setInteracted={setInteracted} muted={muted} interacted={interacted} />}
+            video={<VideoComponent setInteracted={setInteracted} muted={muted} setMuted={setMuted} interacted={interacted} />}
             overlay={(
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
-                <StreamLayerSDKAdvertisement muted={muted} persistent skipTypeCheck />
-                {interacted && <StreamLayerSDKAdvertisement muted={muted} persistent skipTypeCheck externalAd />}
+                <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck />
+                {interacted && <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck externalAd />}
               </>
             )}
             appNotification={<StreamLayerSDKNotification />}

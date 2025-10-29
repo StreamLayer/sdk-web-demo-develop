@@ -1,11 +1,11 @@
 import Hls from "hls.js";
-import { Preload, Video, VideoIFrame, InteractNote } from './styles'
+import { Preload, Video, VideoIFrame, InteractNote, VideoMuteButton } from './styles'
 import { useEffect, useRef, useState } from 'react'
 import { useStreamLayer } from "@streamlayer/react"
 
-export const VideoComponent: React.FC<{ muted: boolean, interacted: boolean, setInteracted: (interacted: boolean) => void
-}> = ({ interacted, setInteracted, muted }) => {
-  const videoRef = useRef() as React.RefObject<HTMLVideoElement>;
+export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch<React.SetStateAction<boolean>>, interacted: boolean, setInteracted: (interacted: boolean) => void
+}> = ({ interacted, setInteracted, muted, setMuted }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
   const sdk = useStreamLayer()
   const [streamSrc, setStreamSrc] = useState('')
@@ -77,6 +77,7 @@ export const VideoComponent: React.FC<{ muted: boolean, interacted: boolean, set
         controls
         controlsList="nodownload nofullscreen noremoteplayback"
       />
+      <VideoMuteButton onClick={() => setMuted((prev) => !prev)}>{muted ? 'unmute' : 'mute'}</VideoMuteButton>
       {!interacted && errOnPlay && <InteractNote>Click to start</InteractNote>}
     </>
   )

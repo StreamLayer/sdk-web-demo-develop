@@ -49,3 +49,9 @@ export const InteractNote = styled.div`
     align-items: center;
     justify-content: center;
 `
+
+export const VideoMuteButton = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+`
