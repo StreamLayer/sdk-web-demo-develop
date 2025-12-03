@@ -115,6 +115,7 @@ Error generating stack: `+i.message+`
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-image: ${e} !important;
+    z-index: -1;
 
     opacity: 0;
     animation: fade-sl-bg-in 0.3s linear forwards;
