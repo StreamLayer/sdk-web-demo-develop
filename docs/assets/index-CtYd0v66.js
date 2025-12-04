@@ -115,10 +115,15 @@ Error generating stack: `+i.message+`
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-image: ${e} !important;
-    z-index: -1;
+    z-index: 0;
 
     opacity: 0;
     animation: fade-sl-bg-in 0.3s linear forwards;
+  }
+
+  #${t||"SlLayoutContainer"} > div {
+    position: relative;
+    z-index: 1;
   }
 
   @keyframes fade-sl-bg-in {
