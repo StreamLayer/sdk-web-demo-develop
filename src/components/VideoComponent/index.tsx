@@ -1,21 +1,45 @@
 import Hls from "hls.js";
 import { Preload, Video, VideoIFrame, InteractNote, VideoMuteButton } from './styles'
-import { useEffect, useRef, useState } from 'react'
-import { useStreamLayer } from "@streamlayer/react"
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { VideoPlayerCallback, useStreamLayer } from "@streamlayer/react"
+import { StreamLayerPauseAd } from "@streamlayer/react/pause-ad"
 
 export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch<React.SetStateAction<boolean>>, interacted: boolean, setInteracted: (interacted: boolean) => void
 }> = ({ interacted, setInteracted, muted, setMuted }) => {
+  const [showPauseAd, setShowPauseAd] = useState(false)
+  const [pauseAdRendered, setPauseAdRendered] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
   const sdk = useStreamLayer()
   const [streamSrc, setStreamSrc] = useState('')
+  const [pauseAdUrl, setPauseAdUrl] = useState('')
   const [errOnPlay, setErrOnPlay] = useState(false)
+
+  const onClosePauseAd = useCallback(() => {
+    setShowPauseAd(false)
+  }, [])
+
+  const onRenderPauseAd = useCallback((params: { rendered: boolean }) => {
+    setPauseAdRendered(params.rendered)
+  }, [])
+
+  // Track video playing state
+  const onVideoPlayWithState = useCallback(() => {
+    setShowPauseAd(false)
+  }, [])
+
+  const onVideoPauseWithState = useCallback(() => {
+    setShowPauseAd(true)
+  }, [])
 
   useEffect(() => {
     if (sdk) {
       return sdk.streamSummary().subscribe((value: any) => {
         if (value.data?.summary?.stream) {
           setStreamSrc(value.data.summary.stream)
+        }
+        if (value.data?.summary?.pauseAdUrl?.[0]) {
+          setPauseAdUrl(value.data.summary.pauseAdUrl[0])
         }
       })
     }
@@ -57,6 +81,20 @@ export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch
     }
   }, [interacted, errOnPlay])
 
+  const showControls = !pauseAdRendered
+
+  const videoPlayerController: VideoPlayerCallback = useCallback((videoPlayerData) => {
+    const video = videoRef.current
+
+    if (!video) return
+
+    if (videoPlayerData.play === true) {
+      setShowPauseAd(false)
+
+      video.play()
+    }
+  }, [])
+
   if (!streamSrc) {
     return <Preload><img src="https://cdn.streamlayer.io/sdk-web-demo/loader.png" /></Preload>
   }
@@ -67,17 +105,33 @@ export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch
 
   return (
     <>
-      <Video
-        src={streamSrc}
-        ref={videoRef}
-        muted={muted}
-        autoPlay
-        loop
-        playsInline
-        controls
-        controlsList="nodownload nofullscreen noremoteplayback"
-      />
-      <VideoMuteButton onClick={() => setMuted((prev) => !prev)}>{muted ? 'unmute' : 'mute'}</VideoMuteButton>
+      <StreamLayerPauseAd
+        showPauseAd={showPauseAd}
+        onRenderPauseAd={onRenderPauseAd}
+        onClosePauseAd={onClosePauseAd}
+        videoPlayerController={videoPlayerController}
+        pauseAdVastUrl={pauseAdUrl ?[
+          {
+            template: 'default',
+            url: pauseAdUrl,
+          },
+        ] : undefined}
+      >
+        <Video
+          src={streamSrc}
+          ref={videoRef}
+          muted={muted}
+          onPlay={onVideoPlayWithState}
+          onPause={onVideoPauseWithState}
+          onEnded={onVideoPauseWithState}
+          autoPlay
+          loop
+          playsInline
+          controls={showControls}
+          controlsList="nodownload nofullscreen noremoteplayback"
+        />
+      </StreamLayerPauseAd>
+      {showControls && <VideoMuteButton onClick={() => setMuted((prev) => !prev)}>{muted ? 'unmute' : 'mute'}</VideoMuteButton>}
       {!interacted && errOnPlay && <InteractNote>Click to start</InteractNote>}
     </>
   )
