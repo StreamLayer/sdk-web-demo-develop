@@ -1,7 +1,7 @@
 import Hls from "hls.js";
 import { Preload, Video, VideoIFrame, InteractNote, VideoMuteButton } from './styles'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { VideoPlayerCallback, useStreamLayer } from "@streamlayer/react"
+import { VideoPlayerCallback, VideoPlayerData, useStreamLayer } from "@streamlayer/react"
 import { StreamLayerPauseAd } from "@streamlayer/react/pause-ad"
 
 export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch<React.SetStateAction<boolean>>, interacted: boolean, setInteracted: (interacted: boolean) => void
@@ -83,7 +83,7 @@ export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch
 
   const showControls = !pauseAdRendered
 
-  const videoPlayerController: VideoPlayerCallback = useCallback((videoPlayerData) => {
+  const videoPlayerController: VideoPlayerCallback = useCallback((videoPlayerData: VideoPlayerData) => {
     const video = videoRef.current
 
     if (!video) return
