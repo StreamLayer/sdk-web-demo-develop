@@ -17,6 +17,14 @@ export const AppContainer = styled.div`
             font-size: 16px !important;
         `)}
     }
+
+    .SLPolymarketButton {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
 `
 
 export const PointsContainer = styled.div`

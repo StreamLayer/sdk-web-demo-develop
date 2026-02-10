@@ -3,6 +3,7 @@ import { ContentActivateParams, StreamLayerProvider, StreamLayerSDKNotification 
 import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
 import { StreamLayerSDKAdvertisement } from '@streamlayer/react/advertisement'
+import { StreamLayerSDKPolymarket, StreamLayerSDKPolymarketButton } from '@streamlayer/react/polymarket'
 import { anonymous } from '@streamlayer/sdk-web-anonymous-auth'
 import { cx } from '@emotion/css'
 
@@ -87,11 +88,15 @@ function App() {
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
                 <StreamLayerSDKAdvertisement sidebar='right' muted={!muted} persistent skipTypeCheck />
+                <StreamLayerSDKPolymarket />
                 {interacted && <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck externalAd />}
               </>
             )}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
-            video={<VideoComponent setInteracted={setInteracted} muted={muted} setMuted={setMuted} interacted={interacted} />}
+            video={<>
+              <VideoComponent setInteracted={setInteracted} muted={muted} setMuted={setMuted} interacted={interacted} />
+              <StreamLayerSDKPolymarketButton />
+            </>}
             overlay={(
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
