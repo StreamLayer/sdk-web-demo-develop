@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { breakpoints } from './breakpoints'
 
 export const Container = styled.div`
-    width: 100dvw;
+    width: 100%;
     height: 100dvh;
     background: rgba(0, 22, 43, 0.90);
 `
