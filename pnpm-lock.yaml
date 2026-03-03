@@ -21,11 +21,11 @@ importers:
         specifier: ^11.13.0
         version: 11.14.0(@emotion/react@11.14.0(@types/react@18.3.18)(react@18.3.1))(@types/react@18.3.18)(react@18.3.1)
       '@streamlayer/react':
-        specifier: ^1.23.1
-        version: 1.23.1(hhusynjnw4kjnhh5hif6dknfwa)
+        specifier: ^1.24.6
+        version: 1.24.6(sf72owhfcs7oboi65lknrvcjqi)
       '@streamlayer/sdk-web-anonymous-auth':
-        specifier: ^1.3.15
-        version: 1.3.15(@streamlayer/sdk-web@1.17.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(pino@10.3.1)(uuid@13.0.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(jose@6.1.3)
+        specifier: ^1.4.6
+        version: 1.4.6(@streamlayer/sdk-web@1.18.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.1)(pino@10.3.1)(uuid@13.0.0))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(jose@6.1.3)
       '@types/lodash.throttle':
         specifier: ^4.1.9
         version: 4.1.9
@@ -47,7 +47,7 @@ importers:
         version: 7.15.2
       '@swc/jest':
         specifier: ^0.2.36
-        version: 0.2.37(@swc/core@1.15.11)
+        version: 0.2.37(@swc/core@1.15.18)
       '@testing-library/jest-dom':
         specifier: ^6.4.6
         version: 6.6.3
@@ -583,8 +583,8 @@ packages:
     resolution: {integrity: sha512-lB05FkqEdUg2AA0xEbUz0SnkXT1LcCTa438W4IWTUh4hdOnVbQyOJ81OrDXsJk/LSiJHubgGEFoR5EHq1NsH1A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fastify/deepmerge@3.2.0':
-    resolution: {integrity: sha512-aO5giNgFN+rD4fMUAkro9nEL7c9gh5Q3lh0ZGKMDAhQAytf22HLicF/qZ2EYTDmH+XL2WvdazwBfOdmp6NiwBg==}
+  '@fastify/deepmerge@3.2.1':
+    resolution: {integrity: sha512-N5Oqvltoa2r9z1tbx4xjky0oRR60v+T47Ic4J1ukoVQcptLOrIdRnCSdTGmOmajZuHVKlTnfcmrjyqsGEW1ztA==}
 
   '@google-cloud/paginator@5.0.2':
     resolution: {integrity: sha512-DJS3s0OVH4zFDB1PzjxAsHqJT6sKVbRwwML0ZBP9PbU7Yebtu/7SWMRzvO2J3nUi9pRNITCfu4LJeooM2w4pjg==}
@@ -857,83 +857,83 @@ packages:
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
 
-  '@streamlayer/feature-advertisement@0.1.6':
-    resolution: {integrity: sha512-4PyZcCJA4SR43BqA0yT/8wHqsrnJf2/OPnbtzCUpsr+QLa1CRjmbwR7MHlmOdeg9LnwoiXCVJZKdq9p4kfalnA==}
+  '@streamlayer/feature-advertisement@0.2.6':
+    resolution: {integrity: sha512-rsQ0HUfjhFco6vPgWwPwuf3+DbSjOyet6fEJfpGV9PD5z3ICi76lEQRzeI+2yRlyDfahDekeYjN5ln/uhXWFoQ==}
     peerDependencies:
       '@dailymotion/vast-client': ^6.4.2
-      '@streamlayer/sdk-web-api': ^1.15.6
-      '@streamlayer/sdk-web-core': ^1.20.3
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sdk-web-types': ^1.16.15
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/sdk-web-api': ^1.16.6
+      '@streamlayer/sdk-web-core': ^1.21.6
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sdk-web-types': ^1.17.6
+      '@streamlayer/sl-eslib': ^5.229.1
       nanostores: ^1.1.0
 
-  '@streamlayer/feature-gamification@1.24.6':
-    resolution: {integrity: sha512-KGDu+xKk6DlxpRq5zOFVQg+AkzPKlmHJSQkF2p7gR5953nncLLuuX6OMbliTkInGxZ5kv+bqYdOEXQJyy1To2w==}
+  '@streamlayer/feature-gamification@1.26.0':
+    resolution: {integrity: sha512-2Tgquz988XWkyxLTacDFyBRNrV++ABpqgGLdFW4St+TPSjhaOJVn8pS3xL2iRd/WVmhhKfP1pgiKJAOBRpa1Gg==}
     peerDependencies:
       '@bufbuild/protobuf': ^2.2.2
       '@fastify/deepmerge': ^2.0.0
-      '@streamlayer/sdk-web-api': ^1.15.6
-      '@streamlayer/sdk-web-core': ^1.20.3
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sdk-web-notifications': ^1.3.62
-      '@streamlayer/sdk-web-storage': ^1.0.100
-      '@streamlayer/sdk-web-types': ^1.16.15
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/sdk-web-api': ^1.16.6
+      '@streamlayer/sdk-web-core': ^1.21.6
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sdk-web-notifications': ^1.3.70
+      '@streamlayer/sdk-web-storage': ^1.0.108
+      '@streamlayer/sdk-web-types': ^1.17.6
+      '@streamlayer/sl-eslib': ^5.229.1
       nanostores: ^1.1.0
       uuid: ^11.1.0
 
-  '@streamlayer/feature-polymarket@0.1.6':
-    resolution: {integrity: sha512-dH4sNRjsmtIYd2K4zBR6mmIs0CTYz3si/xK9dPwE9ZkK4HH4+AX7CMtBEXR9DSFOgjQje4sMFdZMAmxxKXjG+g==}
+  '@streamlayer/feature-polymarket@0.2.6':
+    resolution: {integrity: sha512-tHx8fE9eugHr09VT0jh8kFsxTYM8YDWqnaYkhReFDaUiz5z4ou4h/iXBWLMlBj/sgTgBKCWjPjExb8Tibcsr7g==}
     peerDependencies:
-      '@streamlayer/sdk-web-api': ^1.15.6
-      '@streamlayer/sdk-web-core': ^1.20.3
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sdk-web-types': ^1.16.15
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/sdk-web-api': ^1.16.6
+      '@streamlayer/sdk-web-core': ^1.21.6
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sdk-web-types': ^1.17.6
+      '@streamlayer/sl-eslib': ^5.229.1
       nanostores: ^1.1.0
 
-  '@streamlayer/react-polyfills@0.2.6':
-    resolution: {integrity: sha512-LVP5E15vT27jsrLrqXOIvLPNvwdPPppAPbPg7HeNdXREIPbnyUnwfU85Vl4T12/VoZevPiWiG/afW19K2lQJ3A==}
+  '@streamlayer/react-polyfills@0.2.14':
+    resolution: {integrity: sha512-Xm0rAq8ZsH6OUr7o/HGz+IIxPH6Ellh+ji8uxtEPxyyYO21usRpMZYrbsYx2LOax5e+B1cqHIPOYjEJGdiB1mQ==}
     peerDependencies:
       nanostores: ^1.1.0
-      react: 18.3.1
+      react: ^17.0.0 || ^18.0.0
       use-sync-external-store: ^1.4.0
 
-  '@streamlayer/react-ui@1.35.3':
-    resolution: {integrity: sha512-0pJrww6JTr020qEXEzHTVZAhujhx0UfnhZyfHXn/Iy09sv0zOxlNIYwIi4yUqlqgxmVFW7ypGmYJiCf9RYqhVw==}
+  '@streamlayer/react-ui@1.37.0':
+    resolution: {integrity: sha512-uCEwDEVU9esaJMfFp7v5FD/1oVt/muN8gOhY7YrGWhlbVI0Kpx4BHh/fS/p4BfdvuC9AHmmIgNLQAu9nuiVCCw==}
     peerDependencies:
       '@connectrpc/connect': ^2.0.0
       '@connectrpc/connect-web': ^2.0.0
       '@dailymotion/vast-client': ^6.4.2
       '@lottiefiles/react-lottie-player': ^3.5.4
       '@noriginmedia/norigin-spatial-navigation': ^2.3.0
-      '@streamlayer/feature-advertisement': ^0.1.6
-      '@streamlayer/feature-gamification': ^1.24.6
-      '@streamlayer/feature-polymarket': ^0.1.6
-      '@streamlayer/react-polyfills': ^0.2.6
-      '@streamlayer/sdk-web': ^1.17.6
-      '@streamlayer/sdk-web-analytics': ^1.15.6
-      '@streamlayer/sdk-web-anonymous-auth': ^1.3.15
-      '@streamlayer/sdk-web-api': ^1.15.6
-      '@streamlayer/sdk-web-core': ^1.20.3
-      '@streamlayer/sdk-web-features': ^1.0.100
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sdk-web-notifications': ^1.3.62
-      '@streamlayer/sdk-web-storage': ^1.0.100
-      '@streamlayer/sdk-web-types': ^1.16.15
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/feature-advertisement': ^0.2.6
+      '@streamlayer/feature-gamification': ^1.26.0
+      '@streamlayer/feature-polymarket': ^0.2.6
+      '@streamlayer/react-polyfills': ^0.2.14
+      '@streamlayer/sdk-web': ^1.18.6
+      '@streamlayer/sdk-web-analytics': ^1.16.6
+      '@streamlayer/sdk-web-anonymous-auth': ^1.4.6
+      '@streamlayer/sdk-web-api': ^1.16.6
+      '@streamlayer/sdk-web-core': ^1.21.6
+      '@streamlayer/sdk-web-features': ^1.0.108
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sdk-web-notifications': ^1.3.70
+      '@streamlayer/sdk-web-storage': ^1.0.108
+      '@streamlayer/sdk-web-types': ^1.17.6
+      '@streamlayer/sl-eslib': ^5.229.1
       hls.js: ^1.6.13
       lodash.throttle: ^4.1.1
-      react: 18.3.1
+      react: ^17.0.0 || ^18.0.0
       react-auth-code-input: ^3.2.1
       react-countdown-circle-timer: ^3.2.1
       react-countup: ^6.5.3
-      react-dom: 18.3.1
+      react-dom: ^17.0.0 || ^18.0.0
       react-infinite-scroller: ^1.2.6
       react-phone-number-input: ^3.4.8
       react-qr-code: ^2.0.16
@@ -946,9 +946,12 @@ packages:
       videojs-contrib-ads: ^7.5.2
       vmap: ^3.2.0
       vpaid-html5-client: ^0.1.14
+    peerDependenciesMeta:
+      react-phone-number-input:
+        optional: true
 
-  '@streamlayer/react@1.23.1':
-    resolution: {integrity: sha512-0yq/1C94MneDhgSSfBZ9i/pOaKQgkSjJjjv42mJKHihweGcm91RH6VDb0z43yy07Xo9kbCIxuxo0OqEa/2VjQQ==}
+  '@streamlayer/react@1.24.6':
+    resolution: {integrity: sha512-IU5bIrZL8Sm/zTYcFn9/oXmxyTDffVKFSpsnJzCXgbmWqL3kES8DczEzZYbGGBbDqQr7CM8k3Cp7v1rPEV49RA==}
     peerDependencies:
       '@fastify/deepmerge': ^2.0.0
       '@lottiefiles/react-lottie-player': ^3.5.4
@@ -957,113 +960,118 @@ packages:
       lodash.throttle: ^4.1.1
       nanostores: ^1.1.0
       pino: ^9.4.0
-      react: 18.3.1
+      react: ^17.0.0 || ^18.0.0
       react-auth-code-input: ^3.2.1
       react-countdown-circle-timer: ^3.2.1
       react-countup: ^6.5.3
-      react-dom: 18.3.1
+      react-dom: ^17.0.0 || ^18.0.0
       react-infinite-scroller: ^1.2.6
       react-phone-number-input: ^3.4.8
       uuid: ^11.1.0
 
-  '@streamlayer/sdk-web-analytics@1.15.6':
-    resolution: {integrity: sha512-UOvdHOM/aKjgyNmj1e4LUWLqpjchThzV5vfJJfPCV4lur6xUJG7d13up8M0to0Cp+Em2CpcUZyvKnVUbFrxyQg==}
+  '@streamlayer/sdk-web-analytics@1.16.6':
+    resolution: {integrity: sha512-WdSeZAwDAYvH5FPMHSpdq2LcHhkdXilDXgRZyBr6/JFoPmg/KhnGmFRwvMQZRqBRPY1j4QImTf1lZhPZRcVFRQ==}
     peerDependencies:
       '@bufbuild/protobuf': ^2.2.2
       '@connectrpc/connect': ^2.0.0
-      '@streamlayer/feature-gamification': ^1.24.6
-      '@streamlayer/sdk-web-api': ^1.15.6
-      '@streamlayer/sdk-web-core': ^1.20.3
-      '@streamlayer/sdk-web-features': ^1.0.100
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/feature-gamification': ^1.26.0
+      '@streamlayer/sdk-web-api': ^1.16.6
+      '@streamlayer/sdk-web-core': ^1.21.6
+      '@streamlayer/sdk-web-features': ^1.0.108
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sl-eslib': ^5.229.1
       uuid: ^11.1.0
 
-  '@streamlayer/sdk-web-anonymous-auth@1.3.15':
-    resolution: {integrity: sha512-K3Hc/9z6JiBIQXLOLhewWOVHOZ6MLt+5bfhzVEOC5iy7rgklh2KqiMI1CVOCi/GPwYuxH+FilqG80AdX9bKQoQ==}
+  '@streamlayer/sdk-web-anonymous-auth@1.4.6':
+    resolution: {integrity: sha512-jYzTMm8OnFJSxRdo+24bQHwjrLcp35vKxiiGA0Ueot65IaR7rDNXTg4N5xy5qLs4xnW81Pq4lIRsah1e+7CZMA==}
     peerDependencies:
-      '@streamlayer/sdk-web': ^1.17.6
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/sdk-web': ^1.18.6
+      '@streamlayer/sl-eslib': ^5.229.1
       jose: ^5.9.3
 
-  '@streamlayer/sdk-web-api@1.15.6':
-    resolution: {integrity: sha512-ErR08P5tGlGLwmHAhWq3YA/cgmDV7P6QcwlivX4/KKNAWA+Ea7Y4IGmlUeMxCoYRw8XU9aoSh4kPUw/DEDblNw==}
+  '@streamlayer/sdk-web-api@1.16.6':
+    resolution: {integrity: sha512-paXAccoiBvALSLlheOfgVUj/3S4Nmw5K+bpBjQfdmxLcAdt4WMJUUdLp6c5UwG+c+v1RbI4vvUU5jG+1Dktygw==}
     peerDependencies:
       '@connectrpc/connect': ^2.0.0
       '@connectrpc/connect-web': ^2.0.0
       '@nanostores/query': ^0.3.4
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sdk-web-storage': ^1.0.100
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sdk-web-storage': ^1.0.108
+      '@streamlayer/sl-eslib': ^5.229.1
       nanostores: ^1.1.0
       uuid: ^11.1.0
 
-  '@streamlayer/sdk-web-core@1.20.3':
-    resolution: {integrity: sha512-wgz5XfGjIyjpxrtDraGNMBZd1Kuu0KasYiPFkJpQvQ/7H8We93LRNolh9w9AlJTa+KArRgEpu2KY3+fP3pDNEA==}
+  '@streamlayer/sdk-web-core@1.21.6':
+    resolution: {integrity: sha512-vggHvEac6IAC++2PFa0ASwTZtp5qy6OCvMweEIwsG6XttvKVhDxwAzH2Cpyz1tWl4/LUuRin5DXYybiiHPprdA==}
     peerDependencies:
       '@nanostores/query': ^0.3.4
-      '@streamlayer/sdk-web-api': ^1.15.6
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sdk-web-storage': ^1.0.100
-      '@streamlayer/sdk-web-types': ^1.16.15
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/sdk-web-api': ^1.16.6
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sdk-web-storage': ^1.0.108
+      '@streamlayer/sdk-web-types': ^1.17.6
+      '@streamlayer/sl-eslib': ^5.229.1
       nanostores: ^1.1.0
 
-  '@streamlayer/sdk-web-features@1.0.100':
-    resolution: {integrity: sha512-1gAuA0rG66LS0oHP03krV3L0P6S/zRasc4GB/1FXS2hglELnY9ky1/3aYDyzVCx5SHROTAldAUCTfS+r9qq4LQ==}
+  '@streamlayer/sdk-web-features@1.0.108':
+    resolution: {integrity: sha512-aVNzaApd5dY0H6IhpLTtJP8CONcU3I/zlThrBeQWBcOg28rKE/fNTaQqxPY6RUm4yRydK3f93fX8NJ1jdM/Xyw==}
     peerDependencies:
-      '@streamlayer/feature-gamification': ^1.24.6
-      '@streamlayer/sdk-web-core': ^1.20.3
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-types': ^1.16.15
+      '@streamlayer/feature-gamification': ^1.26.0
+      '@streamlayer/sdk-web-core': ^1.21.6
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-types': ^1.17.6
 
-  '@streamlayer/sdk-web-interfaces@1.9.6':
-    resolution: {integrity: sha512-N7+3c7X/fZLLZfcq8Wpm+Xtqp6yBaez/Zdwxeq0OYvBIRPVpTLOLDVlvXsl3FtK4bZgjD+eKn7JnVkTXHRpRBQ==}
+  '@streamlayer/sdk-web-interfaces@1.9.14':
+    resolution: {integrity: sha512-lAXX1+YMTB6ig0tatCnhoAe5Alw6mWsIaGA5PFTzt/CgQJ876Rfvln1WUa7H3WEZDb0xDiFpj1A3oY8WSulauQ==}
     peerDependencies:
       '@bufbuild/protobuf': ^2.2.2
       '@nanostores/query': ^0.3.4
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sdk-web-types': ^1.16.15
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sdk-web-types': ^1.17.6
       nanostores: ^1.1.0
 
-  '@streamlayer/sdk-web-logger@1.0.100':
-    resolution: {integrity: sha512-hTyTODRsJOE08KsQBHs5vtwi0wuqPGgio/wJAbAqeHgvuQ9wxsoykn3+lpE8JY0w4za4kGrBd2+/7DaGYosRcQ==}
+  '@streamlayer/sdk-web-logger@1.0.108':
+    resolution: {integrity: sha512-kCg0TRIckU44z+EjYaZkWzdWTUPrf4DMU9eZxL4+FZFSmL2N6MUCJ0qfYJPgbcYOQSW8A+F9KiFQsVKIM5IFkA==}
     peerDependencies:
       pino: ^9.4.0
 
-  '@streamlayer/sdk-web-notifications@1.3.62':
-    resolution: {integrity: sha512-wxGPm9k2xb5oePrFq6yj1AG4Bp81LJpXuz2ZhS+ufxHlfb6/hWSuhZGKH7T/xhEd62astUjW2hhLlXLpZo/KUg==}
+  '@streamlayer/sdk-web-notifications@1.3.70':
+    resolution: {integrity: sha512-9KFUHbAZI+XScO5P3UbzMjoUpLgPfcsGReH/R2igqeqv9xg4/JAiS9H2rh4jPWjoJAVuo49mKl6EjTHCKpF8bg==}
     peerDependencies:
-      '@streamlayer/sdk-web-interfaces': ^1.9.6
-      '@streamlayer/sdk-web-logger': ^1.0.100
-      '@streamlayer/sdk-web-storage': ^1.0.100
-      '@streamlayer/sdk-web-types': ^1.16.15
+      '@streamlayer/sdk-web-interfaces': ^1.9.14
+      '@streamlayer/sdk-web-logger': ^1.0.108
+      '@streamlayer/sdk-web-storage': ^1.0.108
+      '@streamlayer/sdk-web-types': ^1.17.6
 
-  '@streamlayer/sdk-web-storage@1.0.100':
-    resolution: {integrity: sha512-bO9YHCI5xD74wIYsML25++nm+3I/V1DxdtxruohwpZ1SdLfp/SuqpYMUraZ4aCXKB+J9wv8t76RXP+7lz01oew==}
+  '@streamlayer/sdk-web-storage@1.0.108':
+    resolution: {integrity: sha512-aCOEDnDG0cWtzvf5bqo5ix/s4dJqR5gik7qSYf/aXMExYvcDQYDXSssG0lJGOC7fJJ97ySbXUHV2Ud+A4t9Atw==}
 
-  '@streamlayer/sdk-web-types@1.16.15':
-    resolution: {integrity: sha512-PlC9fqL/EM7v1adeiLcaPJoqOyMEgVQT7R/SUvLCOjBmrxrTN0ngWcyJfW/ZF5FJ7fJmq3gp3P0vX2SM1RsOhA==}
+  '@streamlayer/sdk-web-types@1.17.6':
+    resolution: {integrity: sha512-x9hLDd7nOV52rr8r3xBo3ucSn990wLFtxgAGUE3paDNykGqZmnbwa9xYvPoaB4Z2unRuXinmv1MiMavWkR8rvQ==}
     peerDependencies:
       '@bufbuild/protobuf': ^2.2.2
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/sl-eslib': ^5.229.1
 
-  '@streamlayer/sdk-web@1.17.6':
-    resolution: {integrity: sha512-Z/A9XPJS6xrRMX4dGCUzIqr0AzPOjDKTMS2da9zPJtQTFmSgQ/Pc0JYVm3gNldOGCXH/yChPKkC2jV6Mw+787w==}
+  '@streamlayer/sdk-web@1.18.6':
+    resolution: {integrity: sha512-Sya0cE76dphKJJmlheDhe2fJH/bCLk2JBPuw2c3l9fmMUWAr8OOnK2hXyhFWOqMzY3s0szu3y09BH9kpuLOoXA==}
     peerDependencies:
       '@connectrpc/connect': ^2.0.0
       '@connectrpc/connect-web': ^2.0.0
       '@nanostores/query': ^0.3.4
-      '@streamlayer/sl-eslib': ^5.228.0
+      '@streamlayer/sl-eslib': ^5.229.1
       nanostores: ^1.1.0
       pino: ^9.4.0
       uuid: ^11.1.0
 
-  '@streamlayer/sl-eslib@5.229.0':
-    resolution: {integrity: sha512-OFCTi1jl5DYP6E/7zBsJt8Mo2fqemgu9UiWE3QaawS3T4GrYSaNNGeQtcDMqTjkvwKmlk72a6Pb+mEUUAXMszg==}
+  '@streamlayer/sl-eslib@5.230.0':
+    resolution: {integrity: sha512-r06achjFzNVmYMZ8oLqutLZMjrEvYS0I10Mbj8hJIO45sJX7wd2JSCWr9y4YzQ4RiOXmr0nu4TEHmtEnHKGz7A==}
+    peerDependencies:
+      '@connectrpc/connect-query': ^2.0.1
+    peerDependenciesMeta:
+      '@connectrpc/connect-query':
+        optional: true
 
   '@swc/core-darwin-arm64@1.10.16':
     resolution: {integrity: sha512-iikIxwqCQ4Bvz79vJ4ELh26efPf1u5D9TFdmXSJUBs7C3mmMHvk5zyWD9A9cTowXiW6WHs2gE58U1R9HOTTIcg==}
@@ -1071,8 +1079,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@swc/core-darwin-arm64@1.15.11':
-    resolution: {integrity: sha512-QoIupRWVH8AF1TgxYyeA5nS18dtqMuxNwchjBIwJo3RdwLEFiJq6onOx9JAxHtuPwUkIVuU2Xbp+jCJ7Vzmgtg==}
+  '@swc/core-darwin-arm64@1.15.18':
+    resolution: {integrity: sha512-+mIv7uBuSaywN3C9LNuWaX1jJJ3SKfiJuE6Lr3bd+/1Iv8oMU7oLBjYMluX1UrEPzwN2qCdY6Io0yVicABoCwQ==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [darwin]
@@ -1083,8 +1091,8 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@swc/core-darwin-x64@1.15.11':
-    resolution: {integrity: sha512-S52Gu1QtPSfBYDiejlcfp9GlN+NjTZBRRNsz8PNwBgSE626/FUf2PcllVUix7jqkoMC+t0rS8t+2/aSWlMuQtA==}
+  '@swc/core-darwin-x64@1.15.18':
+    resolution: {integrity: sha512-wZle0eaQhnzxWX5V/2kEOI6Z9vl/lTFEC6V4EWcn+5pDjhemCpQv9e/TDJ0GIoiClX8EDWRvuZwh+Z3dhL1NAg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
@@ -1095,8 +1103,8 @@ packages:
     cpu: [arm]
     os: [linux]
 
-  '@swc/core-linux-arm-gnueabihf@1.15.11':
-    resolution: {integrity: sha512-lXJs8oXo6Z4yCpimpQ8vPeCjkgoHu5NoMvmJZ8qxDyU99KVdg6KwU9H79vzrmB+HfH+dCZ7JGMqMF//f8Cfvdg==}
+  '@swc/core-linux-arm-gnueabihf@1.15.18':
+    resolution: {integrity: sha512-ao61HGXVqrJFHAcPtF4/DegmwEkVCo4HApnotLU8ognfmU8x589z7+tcf3hU+qBiU1WOXV5fQX6W9Nzs6hjxDw==}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [linux]
@@ -1107,8 +1115,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@swc/core-linux-arm64-gnu@1.15.11':
-    resolution: {integrity: sha512-chRsz1K52/vj8Mfq/QOugVphlKPWlMh10V99qfH41hbGvwAU6xSPd681upO4bKiOr9+mRIZZW+EfJqY42ZzRyA==}
+  '@swc/core-linux-arm64-gnu@1.15.18':
+    resolution: {integrity: sha512-3xnctOBLIq3kj8PxOCgPrGjBLP/kNOddr6f5gukYt/1IZxsITQaU9TDyjeX6jG+FiCIHjCuWuffsyQDL5Ew1bg==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -1119,8 +1127,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@swc/core-linux-arm64-musl@1.15.11':
-    resolution: {integrity: sha512-PYftgsTaGnfDK4m6/dty9ryK1FbLk+LosDJ/RJR2nkXGc8rd+WenXIlvHjWULiBVnS1RsjHHOXmTS4nDhe0v0w==}
+  '@swc/core-linux-arm64-musl@1.15.18':
+    resolution: {integrity: sha512-0a+Lix+FSSHBSBOA0XznCcHo5/1nA6oLLjcnocvzXeqtdjnPb+SvchItHI+lfeiuj1sClYPDvPMLSLyXFaiIKw==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -1131,8 +1139,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@swc/core-linux-x64-gnu@1.15.11':
-    resolution: {integrity: sha512-DKtnJKIHiZdARyTKiX7zdRjiDS1KihkQWatQiCHMv+zc2sfwb4Glrodx2VLOX4rsa92NLR0Sw8WLcPEMFY1szQ==}
+  '@swc/core-linux-x64-gnu@1.15.18':
+    resolution: {integrity: sha512-wG9J8vReUlpaHz4KOD/5UE1AUgirimU4UFT9oZmupUDEofxJKYb1mTA/DrMj0s78bkBiNI+7Fo2EgPuvOJfuAA==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -1143,8 +1151,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@swc/core-linux-x64-musl@1.15.11':
-    resolution: {integrity: sha512-mUjjntHj4+8WBaiDe5UwRNHuEzLjIWBTSGTw0JT9+C9/Yyuh4KQqlcEQ3ro6GkHmBGXBFpGIj/o5VMyRWfVfWw==}
+  '@swc/core-linux-x64-musl@1.15.18':
+    resolution: {integrity: sha512-4nwbVvCphKzicwNWRmvD5iBaZj8JYsRGa4xOxJmOyHlMDpsvvJ2OR2cODlvWyGFH6BYL1MfIAK3qph3hp0Az6g==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -1155,8 +1163,8 @@ packages:
     cpu: [arm64]
     os: [win32]
 
-  '@swc/core-win32-arm64-msvc@1.15.11':
-    resolution: {integrity: sha512-ZkNNG5zL49YpaFzfl6fskNOSxtcZ5uOYmWBkY4wVAvgbSAQzLRVBp+xArGWh2oXlY/WgL99zQSGTv7RI5E6nzA==}
+  '@swc/core-win32-arm64-msvc@1.15.18':
+    resolution: {integrity: sha512-zk0RYO+LjiBCat2RTMHzAWaMky0cra9loH4oRrLKLLNuL+jarxKLFDA8xTZWEkCPLjUTwlRN7d28eDLLMgtUcQ==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
@@ -1167,8 +1175,8 @@ packages:
     cpu: [ia32]
     os: [win32]
 
-  '@swc/core-win32-ia32-msvc@1.15.11':
-    resolution: {integrity: sha512-6XnzORkZCQzvTQ6cPrU7iaT9+i145oLwnin8JrfsLG41wl26+5cNQ2XV3zcbrnFEV6esjOceom9YO1w9mGJByw==}
+  '@swc/core-win32-ia32-msvc@1.15.18':
+    resolution: {integrity: sha512-yVuTrZ0RccD5+PEkpcLOBAuPbYBXS6rslENvIXfvJGXSdX5QGi1ehC4BjAMl5FkKLiam4kJECUI0l7Hq7T1vwg==}
     engines: {node: '>=10'}
     cpu: [ia32]
     os: [win32]
@@ -1179,8 +1187,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@swc/core-win32-x64-msvc@1.15.11':
-    resolution: {integrity: sha512-IQ2n6af7XKLL6P1gIeZACskSxK8jWtoKpJWLZmdXTDj1MGzktUy4i+FvpdtxFmJWNavRWH1VmTr6kAubRDHeKw==}
+  '@swc/core-win32-x64-msvc@1.15.18':
+    resolution: {integrity: sha512-7NRmE4hmUQNCbYU3Hn9Tz57mK9Qq4c97ZS+YlamlK6qG9Fb5g/BB3gPDe0iLlJkns/sYv2VWSkm8c3NmbEGjbg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
@@ -1194,8 +1202,8 @@ packages:
       '@swc/helpers':
         optional: true
 
-  '@swc/core@1.15.11':
-    resolution: {integrity: sha512-iLmLTodbYxU39HhMPaMUooPwO/zqJWvsqkrXv1ZI38rMb048p6N7qtAtTp37sw9NzSrvH6oli8EdDygo09IZ/w==}
+  '@swc/core@1.15.18':
+    resolution: {integrity: sha512-z87aF9GphWp//fnkRsqvtY+inMVPgYW3zSlXH1kJFvRT5H/wiAn+G32qW5l3oEk63KSF1x3Ov0BfHCObAmT8RA==}
     engines: {node: '>=10'}
     peerDependencies:
       '@swc/helpers': '>=0.5.17'
@@ -1221,8 +1229,8 @@ packages:
   '@tanstack/query-core@5.90.20':
     resolution: {integrity: sha512-OMD2HLpNouXEfZJWcKeVKUgQ5n+n3A2JFmBaScpNDUqSrQSjiveC7dKMe53uJUg1nDG16ttFPz2xfilz6i2uVg==}
 
-  '@tanstack/react-query@5.90.20':
-    resolution: {integrity: sha512-vXBxa+qeyveVO7OA0jX1z+DeyCA4JKnThKv411jd5SORpBKgkcVnYKCiBgECvADvniBX7tobwBmg01qq9JmMJw==}
+  '@tanstack/react-query@5.90.21':
+    resolution: {integrity: sha512-0Lu6y5t+tvlTJMTO7oh5NSpJfpg/5D41LlThfepTixPYkJ0sE2Jj0m0f6yYqujBwIXlId87e234+MxG3D3g7kg==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -1397,8 +1405,8 @@ packages:
     resolution: {integrity: sha512-cDF0/Gf81QpY3xYyJKDV14Zwdmid5+uuENhjH2EqFaF0ni+yAyq/LzMaIJdhNJXZI7uLzwIlA+V7oWoyn6Curg==}
     engines: {node: ^18.18.0 || >=20.0.0}
 
-  '@videojs/http-streaming@3.17.3':
-    resolution: {integrity: sha512-6AteOnlpiY8ljijyCB+JszDCIVl9UcSgIiM+CfpBe3Yk2VESjKw9Jq8AkOyZyfLI4U5kDR9izHcGi6ho517n8g==}
+  '@videojs/http-streaming@3.17.4':
+    resolution: {integrity: sha512-XAvdG2dolBuV2Fx8bu1kjmQ2D4TonGzZH68Pgv/O9xMSFWdZtITSMFismeQLEAtMmGwze8qNJp3RgV+jStrJqg==}
     engines: {node: '>=8', npm: '>=5'}
     peerDependencies:
       video.js: ^8.19.0
@@ -1658,8 +1666,8 @@ packages:
     resolution: {integrity: sha512-AdmX6xUzdNASswsFtmwSt7Vj8po9IuqXm0UXz7QKPuEUmPB4XyjGfaAr2PSuELMwkRMVH1EpIkX5bTZGRB3eCA==}
     engines: {node: '>=10'}
 
-  country-flag-icons@1.6.13:
-    resolution: {integrity: sha512-mR9GoTXtj3zAXoZXBkb3J4QvyDllFEPtEfZvHb9U23TAHYXfkJyP03pRtZiR0spxo6Ibja3R/hn6a68T4LHBuA==}
+  country-flag-icons@1.6.15:
+    resolution: {integrity: sha512-92HoA8l6DluEidku8tKBftjuFRj4Rv3zDW1lXxCuNnqAxhUSkvso9gM/Afj4F5BnK+wneHIe3ydI+s+4NA29/Q==}
 
   countup.js@2.9.0:
     resolution: {integrity: sha512-llqrvyXztRFPp6+i8jx25phHWcVWhrHO4Nlt0uAOSKHB8778zzQswa4MU3qKBvkXfJKftRYFJuVHez67lyKdHg==}
@@ -2450,8 +2458,8 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
-  libphonenumber-js@1.12.36:
-    resolution: {integrity: sha512-woWhKMAVx1fzzUnMCyOzglgSgf6/AFHLASdOBcchYCyvWSGWt12imw3iu2hdI5d4dGZRsNWAmWiz37sDKUPaRQ==}
+  libphonenumber-js@1.12.38:
+    resolution: {integrity: sha512-vwzxmasAy9hZigxtqTbFEwp8ZdZ975TiqVDwj5bKx5sR+zi5ucUQy9mbVTkKM9GzqdLdxux/hTw2nmN5J7POMA==}
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
@@ -2584,8 +2592,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nanostores@1.1.0:
-    resolution: {integrity: sha512-yJBmDJr18xy47dbNVlHcgdPrulSn1nhSE6Ns9vTG+Nx9VPT6iV1MD6aQFp/t52zpf82FhLLTXAXr30NuCnxvwA==}
+  nanostores@1.1.1:
+    resolution: {integrity: sha512-EYJqS25r2iBeTtGQCHidXl1VfZ1jXM7Q04zXJOrMlxVVmD0ptxJaNux92n1mJ7c5lN3zTq12MhH/8x59nP+qmg==}
     engines: {node: ^20.0.0 || >=22.0.0}
 
   natural-compare@1.4.0:
@@ -2813,8 +2821,8 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-phone-number-input@3.4.14:
-    resolution: {integrity: sha512-T9MziNuvthzv6+JAhKD71ab/jVXW5U20nQZRBJd6+q+ujmkC+/ISOf2GYo8pIi4VGjdIYRIHDftMAYn3WKZT3w==}
+  react-phone-number-input@3.4.16:
+    resolution: {integrity: sha512-ix1+SIyGuLxnlAeW+XQNhwOmmDd4Zmr6Ng1eQl0E2XS8xIuue3gdZeBG4LGTMjTIFneOTO9pUPL+AEDhV6+r+A==}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
@@ -2834,8 +2842,8 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  react-virtualized-auto-sizer@2.0.2:
-    resolution: {integrity: sha512-FvnVDed3nn7Xt2m2ioo+O1VBpP1uMIl8ygtpkzfhYoRb1e06on6hp2DEBg9AquCXqtP1bhgVT4lS+xpBwrXq7Q==}
+  react-virtualized-auto-sizer@2.0.3:
+    resolution: {integrity: sha512-nonmCSUIh5HtbzazGcQ1NhnMFps/ZBu/UKJyhCt0Fhi7ondLAUZNETtRCWM8RWYZDzVlMYOQGgBmIxUutIhqgw==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
@@ -2846,8 +2854,8 @@ packages:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
-  react-window@2.2.6:
-    resolution: {integrity: sha512-v89O08xRdpCaEuf380B39D1C/0KgUDZA59xft6SVAjzjz/xQxSyXrgDWHymIsYI6TMrqE8WO+G0/PB9AGE8VNA==}
+  react-window@2.2.7:
+    resolution: {integrity: sha512-SH5nvfUQwGHYyriDUAOt7wfPsfG9Qxd6OdzQxl5oQ4dsSsUicqQvjV7dR+NqZ4coY0fUn3w1jnC5PwzIUWEg5w==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
@@ -3062,8 +3070,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  swiper@12.1.0:
-    resolution: {integrity: sha512-BD4CpAOOyEvZ2f0CDx362ea+vmOwukVcmbsQx+0BhRIaBUz8wvcCd//E7RFmvBZCrfyqXCHUVqmgUwts6ywlxw==}
+  swiper@12.1.2:
+    resolution: {integrity: sha512-4gILrI3vXZqoZh71I1PALqukCFgk+gpOwe1tOvz5uE9kHtl2gTDzmYflYCwWvR4LOvCrJi6UEEU+gnuW5BtkgQ==}
     engines: {node: '>= 4.7.0'}
 
   symbol-tree@3.2.4:
@@ -3165,8 +3173,8 @@ packages:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
     engines: {node: '>=10.12.0'}
 
-  video.js@8.23.6:
-    resolution: {integrity: sha512-qjS3HTDo7iapedJuso62scA303i+6CaCUnwyRr8GYd/BYAp7XGb7InUMw2Eu6zrN6IWooPOb78NzyMyjRbIN+Q==}
+  video.js@8.23.7:
+    resolution: {integrity: sha512-cG4HOygYt+Z8j6Sf5DuK6OgEOoM+g9oGP6vpqoZRaD13aHE4PMITbyjJUXZcIQbgB0wJEadBRaVm5lJIzo2jAA==}
 
   videojs-contrib-ads@7.5.2:
     resolution: {integrity: sha512-hrLnWwAVL0CJJPFNuWR0jV+SpW/TWQx7nQkZxMVn2CWZZGMZe2fowtUfjf8U9gozTfM09wKBvHn1mtNg9m3VPg==}
@@ -3543,17 +3551,19 @@ snapshots:
       '@bufbuild/protobuf': 2.11.0
       '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.11.0)
       '@tanstack/query-core': 5.90.20
+    optional: true
 
-  '@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@bufbuild/protobuf': 2.11.0
       '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.11.0)
       '@connectrpc/connect-query-core': 2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)
-      '@tanstack/react-query': 5.90.20(react@18.3.1)
+      '@tanstack/react-query': 5.90.21(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - '@tanstack/query-core'
+    optional: true
 
   '@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))':
     dependencies:
@@ -3778,7 +3788,7 @@ snapshots:
       '@eslint/core': 0.10.0
       levn: 0.4.1
 
-  '@fastify/deepmerge@3.2.0': {}
+  '@fastify/deepmerge@3.2.1': {}
 
   '@google-cloud/paginator@5.0.2':
     dependencies:
@@ -4030,10 +4040,10 @@ snapshots:
       lottie-web: 5.13.0
       react: 18.3.1
 
-  '@nanostores/query@0.3.4(nanostores@1.1.0)':
+  '@nanostores/query@0.3.4(nanostores@1.1.1)':
     dependencies:
       nanoevents: 9.1.0
-      nanostores: 1.1.0
+      nanostores: 1.1.1
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -4121,71 +4131,71 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@streamlayer/feature-advertisement@0.1.6(rg2vq46sbikyu6q67ffqv6csy4)':
+  '@streamlayer/feature-advertisement@0.2.6(mlwdunacdddaupsuhrfjgtnihq)':
     dependencies:
       '@dailymotion/vast-client': 6.4.2
-      '@streamlayer/sdk-web-api': 1.15.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(uuid@13.0.0)
-      '@streamlayer/sdk-web-core': 1.20.3(qndnkbsa3bo2oyp2rctiqqfip4)
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      nanostores: 1.1.0
+      '@streamlayer/sdk-web-api': 1.16.6(2bm4bmv7qatbwwum2yfw67p2ma)
+      '@streamlayer/sdk-web-core': 1.21.6(sxwd25o7sfaiusd4fdfaf4l52u)
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      nanostores: 1.1.1
 
-  '@streamlayer/feature-gamification@1.24.6(fc2ug2wbv3lwfzzconhqabdue4)':
+  '@streamlayer/feature-gamification@1.26.0(66krbz5tgexxeewf7yng7kpl6e)':
     dependencies:
       '@bufbuild/protobuf': 2.11.0
-      '@fastify/deepmerge': 3.2.0
-      '@streamlayer/sdk-web-api': 1.15.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(uuid@13.0.0)
-      '@streamlayer/sdk-web-core': 1.20.3(qndnkbsa3bo2oyp2rctiqqfip4)
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-notifications': 1.3.62(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
-      '@streamlayer/sdk-web-storage': 1.0.100
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      nanostores: 1.1.0
+      '@fastify/deepmerge': 3.2.1
+      '@streamlayer/sdk-web-api': 1.16.6(2bm4bmv7qatbwwum2yfw67p2ma)
+      '@streamlayer/sdk-web-core': 1.21.6(sxwd25o7sfaiusd4fdfaf4l52u)
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-notifications': 1.3.70(@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.108)(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))
+      '@streamlayer/sdk-web-storage': 1.0.108
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      nanostores: 1.1.1
       uuid: 13.0.0
 
-  '@streamlayer/feature-polymarket@0.1.6(puhezn5ioejrva3kt3ifgz6d5q)':
+  '@streamlayer/feature-polymarket@0.2.6(edp7vdpnzziildlzugen4gbn5i)':
     dependencies:
-      '@streamlayer/sdk-web-api': 1.15.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(uuid@13.0.0)
-      '@streamlayer/sdk-web-core': 1.20.3(qndnkbsa3bo2oyp2rctiqqfip4)
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      nanostores: 1.1.0
+      '@streamlayer/sdk-web-api': 1.16.6(2bm4bmv7qatbwwum2yfw67p2ma)
+      '@streamlayer/sdk-web-core': 1.21.6(sxwd25o7sfaiusd4fdfaf4l52u)
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      nanostores: 1.1.1
 
-  '@streamlayer/react-polyfills@0.2.6(nanostores@1.1.0)(react@18.3.1)(use-sync-external-store@1.6.0(react@18.3.1))':
+  '@streamlayer/react-polyfills@0.2.14(nanostores@1.1.1)(react@18.3.1)(use-sync-external-store@1.6.0(react@18.3.1))':
     dependencies:
-      nanostores: 1.1.0
+      nanostores: 1.1.1
       react: 18.3.1
       use-sync-external-store: 1.6.0(react@18.3.1)
 
-  '@streamlayer/react-ui@1.35.3(3ac4uqi5rav4ik5sjijz2ap3my)':
+  '@streamlayer/react-ui@1.37.0(svl5o6zhfu5pfz5zvneqsapsu4)':
     dependencies:
       '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.11.0)
       '@connectrpc/connect-web': 2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))
       '@dailymotion/vast-client': 6.4.2
       '@lottiefiles/react-lottie-player': 3.6.0(react@18.3.1)
       '@noriginmedia/norigin-spatial-navigation': 2.3.0(react@18.3.1)
-      '@streamlayer/feature-advertisement': 0.1.6(rg2vq46sbikyu6q67ffqv6csy4)
-      '@streamlayer/feature-gamification': 1.24.6(fc2ug2wbv3lwfzzconhqabdue4)
-      '@streamlayer/feature-polymarket': 0.1.6(puhezn5ioejrva3kt3ifgz6d5q)
-      '@streamlayer/react-polyfills': 0.2.6(nanostores@1.1.0)(react@18.3.1)(use-sync-external-store@1.6.0(react@18.3.1))
-      '@streamlayer/sdk-web': 1.17.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(pino@10.3.1)(uuid@13.0.0)
-      '@streamlayer/sdk-web-analytics': 1.15.6(yjp6xmecf5adlu2laq424cs2re)
-      '@streamlayer/sdk-web-anonymous-auth': 1.3.15(@streamlayer/sdk-web@1.17.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(pino@10.3.1)(uuid@13.0.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(jose@6.1.3)
-      '@streamlayer/sdk-web-api': 1.15.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(uuid@13.0.0)
-      '@streamlayer/sdk-web-core': 1.20.3(qndnkbsa3bo2oyp2rctiqqfip4)
-      '@streamlayer/sdk-web-features': 1.0.100(@streamlayer/feature-gamification@1.24.6(fc2ug2wbv3lwfzzconhqabdue4))(@streamlayer/sdk-web-core@1.20.3(qndnkbsa3bo2oyp2rctiqqfip4))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-notifications': 1.3.62(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
-      '@streamlayer/sdk-web-storage': 1.0.100
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@streamlayer/feature-advertisement': 0.2.6(mlwdunacdddaupsuhrfjgtnihq)
+      '@streamlayer/feature-gamification': 1.26.0(66krbz5tgexxeewf7yng7kpl6e)
+      '@streamlayer/feature-polymarket': 0.2.6(edp7vdpnzziildlzugen4gbn5i)
+      '@streamlayer/react-polyfills': 0.2.14(nanostores@1.1.1)(react@18.3.1)(use-sync-external-store@1.6.0(react@18.3.1))
+      '@streamlayer/sdk-web': 1.18.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.1)(pino@10.3.1)(uuid@13.0.0)
+      '@streamlayer/sdk-web-analytics': 1.16.6(l45ikrjipkiuqfjga423hzj54m)
+      '@streamlayer/sdk-web-anonymous-auth': 1.4.6(@streamlayer/sdk-web@1.18.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.1)(pino@10.3.1)(uuid@13.0.0))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(jose@6.1.3)
+      '@streamlayer/sdk-web-api': 1.16.6(2bm4bmv7qatbwwum2yfw67p2ma)
+      '@streamlayer/sdk-web-core': 1.21.6(sxwd25o7sfaiusd4fdfaf4l52u)
+      '@streamlayer/sdk-web-features': 1.0.108(@streamlayer/feature-gamification@1.26.0(66krbz5tgexxeewf7yng7kpl6e))(@streamlayer/sdk-web-core@1.21.6(sxwd25o7sfaiusd4fdfaf4l52u))(@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-notifications': 1.3.70(@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.108)(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))
+      '@streamlayer/sdk-web-storage': 1.0.108
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       hls.js: 1.5.20
       lodash.throttle: 4.1.1
       react: 18.3.1
@@ -4194,43 +4204,44 @@ snapshots:
       react-countup: 6.5.3(react@18.3.1)
       react-dom: 18.3.1(react@18.3.1)
       react-infinite-scroller: 1.2.6(react@18.3.1)
-      react-phone-number-input: 3.4.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-qr-code: 2.0.18(react@18.3.1)
-      react-virtualized-auto-sizer: 2.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-window: 2.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-virtualized-auto-sizer: 2.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-window: 2.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-window-infinite-loader: 2.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      swiper: 12.1.0
+      swiper: 12.1.2
       uuid: 13.0.0
-      video.js: 8.23.6
-      videojs-contrib-ads: 7.5.2(video.js@8.23.6)
+      video.js: 8.23.7
+      videojs-contrib-ads: 7.5.2(video.js@8.23.7)
       vmap: 3.2.0
       vpaid-html5-client: 0.1.14
+    optionalDependencies:
+      react-phone-number-input: 3.4.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  '@streamlayer/react@1.23.1(hhusynjnw4kjnhh5hif6dknfwa)':
+  '@streamlayer/react@1.24.6(sf72owhfcs7oboi65lknrvcjqi)':
     dependencies:
       '@bufbuild/protobuf': 2.11.0
       '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.11.0)
       '@connectrpc/connect-web': 2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))
-      '@fastify/deepmerge': 3.2.0
+      '@fastify/deepmerge': 3.2.1
       '@lottiefiles/react-lottie-player': 3.6.0(react@18.3.1)
-      '@nanostores/query': 0.3.4(nanostores@1.1.0)
-      '@streamlayer/feature-gamification': 1.24.6(fc2ug2wbv3lwfzzconhqabdue4)
-      '@streamlayer/react-polyfills': 0.2.6(nanostores@1.1.0)(react@18.3.1)(use-sync-external-store@1.6.0(react@18.3.1))
-      '@streamlayer/react-ui': 1.35.3(3ac4uqi5rav4ik5sjijz2ap3my)
-      '@streamlayer/sdk-web': 1.17.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(pino@10.3.1)(uuid@13.0.0)
-      '@streamlayer/sdk-web-analytics': 1.15.6(yjp6xmecf5adlu2laq424cs2re)
-      '@streamlayer/sdk-web-api': 1.15.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(uuid@13.0.0)
-      '@streamlayer/sdk-web-core': 1.20.3(qndnkbsa3bo2oyp2rctiqqfip4)
-      '@streamlayer/sdk-web-features': 1.0.100(@streamlayer/feature-gamification@1.24.6(fc2ug2wbv3lwfzzconhqabdue4))(@streamlayer/sdk-web-core@1.20.3(qndnkbsa3bo2oyp2rctiqqfip4))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-notifications': 1.3.62(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
-      '@streamlayer/sdk-web-storage': 1.0.100
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nanostores/query': 0.3.4(nanostores@1.1.1)
+      '@streamlayer/feature-gamification': 1.26.0(66krbz5tgexxeewf7yng7kpl6e)
+      '@streamlayer/react-polyfills': 0.2.14(nanostores@1.1.1)(react@18.3.1)(use-sync-external-store@1.6.0(react@18.3.1))
+      '@streamlayer/react-ui': 1.37.0(svl5o6zhfu5pfz5zvneqsapsu4)
+      '@streamlayer/sdk-web': 1.18.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.1)(pino@10.3.1)(uuid@13.0.0)
+      '@streamlayer/sdk-web-analytics': 1.16.6(l45ikrjipkiuqfjga423hzj54m)
+      '@streamlayer/sdk-web-api': 1.16.6(2bm4bmv7qatbwwum2yfw67p2ma)
+      '@streamlayer/sdk-web-core': 1.21.6(sxwd25o7sfaiusd4fdfaf4l52u)
+      '@streamlayer/sdk-web-features': 1.0.108(@streamlayer/feature-gamification@1.26.0(66krbz5tgexxeewf7yng7kpl6e))(@streamlayer/sdk-web-core@1.21.6(sxwd25o7sfaiusd4fdfaf4l52u))(@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-notifications': 1.3.70(@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.108)(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))
+      '@streamlayer/sdk-web-storage': 1.0.108
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@types/lodash.throttle': 4.1.9
       lodash.throttle: 4.1.1
-      nanostores: 1.1.0
+      nanostores: 1.1.1
       pino: 10.3.1
       react: 18.3.1
       react-auth-code-input: 3.2.1(react@18.3.1)
@@ -4238,16 +4249,15 @@ snapshots:
       react-countup: 6.5.3(react@18.3.1)
       react-dom: 18.3.1(react@18.3.1)
       react-infinite-scroller: 1.2.6(react@18.3.1)
-      react-phone-number-input: 3.4.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-phone-number-input: 3.4.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       uuid: 13.0.0
     transitivePeerDependencies:
+      - '@connectrpc/connect-query'
       - '@dailymotion/vast-client'
       - '@noriginmedia/norigin-spatial-navigation'
       - '@streamlayer/feature-advertisement'
       - '@streamlayer/feature-polymarket'
       - '@streamlayer/sdk-web-anonymous-auth'
-      - '@tanstack/query-core'
-      - '@tanstack/react-query'
       - hls.js
       - react-qr-code
       - react-virtualized-auto-sizer
@@ -4260,160 +4270,155 @@ snapshots:
       - vmap
       - vpaid-html5-client
 
-  '@streamlayer/sdk-web-analytics@1.15.6(yjp6xmecf5adlu2laq424cs2re)':
+  '@streamlayer/sdk-web-analytics@1.16.6(l45ikrjipkiuqfjga423hzj54m)':
     dependencies:
       '@bufbuild/protobuf': 2.11.0
       '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.11.0)
-      '@streamlayer/feature-gamification': 1.24.6(fc2ug2wbv3lwfzzconhqabdue4)
-      '@streamlayer/sdk-web-api': 1.15.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(uuid@13.0.0)
-      '@streamlayer/sdk-web-core': 1.20.3(qndnkbsa3bo2oyp2rctiqqfip4)
-      '@streamlayer/sdk-web-features': 1.0.100(@streamlayer/feature-gamification@1.24.6(fc2ug2wbv3lwfzzconhqabdue4))(@streamlayer/sdk-web-core@1.20.3(qndnkbsa3bo2oyp2rctiqqfip4))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@streamlayer/feature-gamification': 1.26.0(66krbz5tgexxeewf7yng7kpl6e)
+      '@streamlayer/sdk-web-api': 1.16.6(2bm4bmv7qatbwwum2yfw67p2ma)
+      '@streamlayer/sdk-web-core': 1.21.6(sxwd25o7sfaiusd4fdfaf4l52u)
+      '@streamlayer/sdk-web-features': 1.0.108(@streamlayer/feature-gamification@1.26.0(66krbz5tgexxeewf7yng7kpl6e))(@streamlayer/sdk-web-core@1.21.6(sxwd25o7sfaiusd4fdfaf4l52u))(@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       uuid: 13.0.0
 
-  '@streamlayer/sdk-web-anonymous-auth@1.3.15(@streamlayer/sdk-web@1.17.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(pino@10.3.1)(uuid@13.0.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(jose@6.1.3)':
+  '@streamlayer/sdk-web-anonymous-auth@1.4.6(@streamlayer/sdk-web@1.18.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.1)(pino@10.3.1)(uuid@13.0.0))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(jose@6.1.3)':
     dependencies:
-      '@streamlayer/sdk-web': 1.17.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(pino@10.3.1)(uuid@13.0.0)
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@streamlayer/sdk-web': 1.18.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.1)(pino@10.3.1)(uuid@13.0.0)
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       jose: 6.1.3
 
-  '@streamlayer/sdk-web-api@1.15.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(uuid@13.0.0)':
+  '@streamlayer/sdk-web-api@1.16.6(2bm4bmv7qatbwwum2yfw67p2ma)':
     dependencies:
       '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.11.0)
       '@connectrpc/connect-web': 2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))
-      '@nanostores/query': 0.3.4(nanostores@1.1.0)
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-storage': 1.0.100
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      nanostores: 1.1.0
+      '@nanostores/query': 0.3.4(nanostores@1.1.1)
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-storage': 1.0.108
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      nanostores: 1.1.1
       uuid: 13.0.0
 
-  '@streamlayer/sdk-web-core@1.20.3(qndnkbsa3bo2oyp2rctiqqfip4)':
+  '@streamlayer/sdk-web-core@1.21.6(sxwd25o7sfaiusd4fdfaf4l52u)':
     dependencies:
-      '@nanostores/query': 0.3.4(nanostores@1.1.0)
-      '@streamlayer/sdk-web-api': 1.15.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(uuid@13.0.0)
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-storage': 1.0.100
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      nanostores: 1.1.0
+      '@nanostores/query': 0.3.4(nanostores@1.1.1)
+      '@streamlayer/sdk-web-api': 1.16.6(2bm4bmv7qatbwwum2yfw67p2ma)
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-storage': 1.0.108
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      nanostores: 1.1.1
 
-  '@streamlayer/sdk-web-features@1.0.100(@streamlayer/feature-gamification@1.24.6(fc2ug2wbv3lwfzzconhqabdue4))(@streamlayer/sdk-web-core@1.20.3(qndnkbsa3bo2oyp2rctiqqfip4))(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))':
+  '@streamlayer/sdk-web-features@1.0.108(@streamlayer/feature-gamification@1.26.0(66krbz5tgexxeewf7yng7kpl6e))(@streamlayer/sdk-web-core@1.21.6(sxwd25o7sfaiusd4fdfaf4l52u))(@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))':
     dependencies:
-      '@streamlayer/feature-gamification': 1.24.6(fc2ug2wbv3lwfzzconhqabdue4)
-      '@streamlayer/sdk-web-core': 1.20.3(qndnkbsa3bo2oyp2rctiqqfip4)
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@streamlayer/feature-gamification': 1.26.0(66krbz5tgexxeewf7yng7kpl6e)
+      '@streamlayer/sdk-web-core': 1.21.6(sxwd25o7sfaiusd4fdfaf4l52u)
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
 
-  '@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)':
+  '@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)':
     dependencies:
       '@bufbuild/protobuf': 2.11.0
-      '@nanostores/query': 0.3.4(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
-      nanostores: 1.1.0
+      '@nanostores/query': 0.3.4(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
+      nanostores: 1.1.1
 
-  '@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1)':
+  '@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1)':
     dependencies:
       pino: 10.3.1
 
-  '@streamlayer/sdk-web-notifications@1.3.62(@streamlayer/sdk-web-interfaces@1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.100)(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))':
+  '@streamlayer/sdk-web-notifications@1.3.70(@streamlayer/sdk-web-interfaces@1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-storage@1.0.108)(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))':
     dependencies:
-      '@streamlayer/sdk-web-interfaces': 1.9.6(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sdk-web-logger@1.0.100(pino@10.3.1))(@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.0)
-      '@streamlayer/sdk-web-logger': 1.0.100(pino@10.3.1)
-      '@streamlayer/sdk-web-storage': 1.0.100
-      '@streamlayer/sdk-web-types': 1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@streamlayer/sdk-web-interfaces': 1.9.14(@bufbuild/protobuf@2.11.0)(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sdk-web-logger@1.0.108(pino@10.3.1))(@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))))(nanostores@1.1.1)
+      '@streamlayer/sdk-web-logger': 1.0.108(pino@10.3.1)
+      '@streamlayer/sdk-web-storage': 1.0.108
+      '@streamlayer/sdk-web-types': 1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))
 
-  '@streamlayer/sdk-web-storage@1.0.100': {}
+  '@streamlayer/sdk-web-storage@1.0.108': {}
 
-  '@streamlayer/sdk-web-types@1.16.15(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+  '@streamlayer/sdk-web-types@1.17.6(@bufbuild/protobuf@2.11.0)(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))':
     dependencies:
       '@bufbuild/protobuf': 2.11.0
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
 
-  '@streamlayer/sdk-web@1.17.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.0))(@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nanostores@1.1.0)(pino@10.3.1)(uuid@13.0.0)':
+  '@streamlayer/sdk-web@1.18.6(@connectrpc/connect-web@2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0)))(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@nanostores/query@0.3.4(nanostores@1.1.1))(@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(nanostores@1.1.1)(pino@10.3.1)(uuid@13.0.0)':
     dependencies:
       '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.11.0)
       '@connectrpc/connect-web': 2.1.1(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))
-      '@nanostores/query': 0.3.4(nanostores@1.1.0)
-      '@streamlayer/sl-eslib': 5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      nanostores: 1.1.0
+      '@nanostores/query': 0.3.4(nanostores@1.1.1)
+      '@streamlayer/sl-eslib': 5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      nanostores: 1.1.1
       pino: 10.3.1
       uuid: 13.0.0
 
-  '@streamlayer/sl-eslib@5.229.0(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@streamlayer/sl-eslib@5.230.0(@connectrpc/connect-query@2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
       '@bufbuild/protobuf': 2.11.0
-      '@connectrpc/connect-query': 2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.20(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    transitivePeerDependencies:
-      - '@connectrpc/connect'
-      - '@tanstack/query-core'
-      - '@tanstack/react-query'
-      - react
-      - react-dom
+    optionalDependencies:
+      '@connectrpc/connect-query': 2.2.0(@bufbuild/protobuf@2.11.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.11.0))(@tanstack/query-core@5.90.20)(@tanstack/react-query@5.90.21(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   '@swc/core-darwin-arm64@1.10.16':
     optional: true
 
-  '@swc/core-darwin-arm64@1.15.11':
+  '@swc/core-darwin-arm64@1.15.18':
     optional: true
 
   '@swc/core-darwin-x64@1.10.16':
     optional: true
 
-  '@swc/core-darwin-x64@1.15.11':
+  '@swc/core-darwin-x64@1.15.18':
     optional: true
 
   '@swc/core-linux-arm-gnueabihf@1.10.16':
     optional: true
 
-  '@swc/core-linux-arm-gnueabihf@1.15.11':
+  '@swc/core-linux-arm-gnueabihf@1.15.18':
     optional: true
 
   '@swc/core-linux-arm64-gnu@1.10.16':
     optional: true
 
-  '@swc/core-linux-arm64-gnu@1.15.11':
+  '@swc/core-linux-arm64-gnu@1.15.18':
     optional: true
 
   '@swc/core-linux-arm64-musl@1.10.16':
     optional: true
 
-  '@swc/core-linux-arm64-musl@1.15.11':
+  '@swc/core-linux-arm64-musl@1.15.18':
     optional: true
 
   '@swc/core-linux-x64-gnu@1.10.16':
     optional: true
 
-  '@swc/core-linux-x64-gnu@1.15.11':
+  '@swc/core-linux-x64-gnu@1.15.18':
     optional: true
 
   '@swc/core-linux-x64-musl@1.10.16':
     optional: true
 
-  '@swc/core-linux-x64-musl@1.15.11':
+  '@swc/core-linux-x64-musl@1.15.18':
     optional: true
 
   '@swc/core-win32-arm64-msvc@1.10.16':
     optional: true
 
-  '@swc/core-win32-arm64-msvc@1.15.11':
+  '@swc/core-win32-arm64-msvc@1.15.18':
     optional: true
 
   '@swc/core-win32-ia32-msvc@1.10.16':
     optional: true
 
-  '@swc/core-win32-ia32-msvc@1.15.11':
+  '@swc/core-win32-ia32-msvc@1.15.18':
     optional: true
 
   '@swc/core-win32-x64-msvc@1.10.16':
     optional: true
 
-  '@swc/core-win32-x64-msvc@1.15.11':
+  '@swc/core-win32-x64-msvc@1.15.18':
     optional: true
 
   '@swc/core@1.10.16':
@@ -4432,28 +4437,28 @@ snapshots:
       '@swc/core-win32-ia32-msvc': 1.10.16
       '@swc/core-win32-x64-msvc': 1.10.16
 
-  '@swc/core@1.15.11':
+  '@swc/core@1.15.18':
     dependencies:
       '@swc/counter': 0.1.3
       '@swc/types': 0.1.25
     optionalDependencies:
-      '@swc/core-darwin-arm64': 1.15.11
-      '@swc/core-darwin-x64': 1.15.11
-      '@swc/core-linux-arm-gnueabihf': 1.15.11
-      '@swc/core-linux-arm64-gnu': 1.15.11
-      '@swc/core-linux-arm64-musl': 1.15.11
-      '@swc/core-linux-x64-gnu': 1.15.11
-      '@swc/core-linux-x64-musl': 1.15.11
-      '@swc/core-win32-arm64-msvc': 1.15.11
-      '@swc/core-win32-ia32-msvc': 1.15.11
-      '@swc/core-win32-x64-msvc': 1.15.11
+      '@swc/core-darwin-arm64': 1.15.18
+      '@swc/core-darwin-x64': 1.15.18
+      '@swc/core-linux-arm-gnueabihf': 1.15.18
+      '@swc/core-linux-arm64-gnu': 1.15.18
+      '@swc/core-linux-arm64-musl': 1.15.18
+      '@swc/core-linux-x64-gnu': 1.15.18
+      '@swc/core-linux-x64-musl': 1.15.18
+      '@swc/core-win32-arm64-msvc': 1.15.18
+      '@swc/core-win32-ia32-msvc': 1.15.18
+      '@swc/core-win32-x64-msvc': 1.15.18
 
   '@swc/counter@0.1.3': {}
 
-  '@swc/jest@0.2.37(@swc/core@1.15.11)':
+  '@swc/jest@0.2.37(@swc/core@1.15.18)':
     dependencies:
       '@jest/create-cache-key-function': 29.7.0
-      '@swc/core': 1.15.11
+      '@swc/core': 1.15.18
       '@swc/counter': 0.1.3
       jsonc-parser: 3.3.1
 
@@ -4465,12 +4470,14 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
 
-  '@tanstack/query-core@5.90.20': {}
+  '@tanstack/query-core@5.90.20':
+    optional: true
 
-  '@tanstack/react-query@5.90.20(react@18.3.1)':
+  '@tanstack/react-query@5.90.21(react@18.3.1)':
     dependencies:
       '@tanstack/query-core': 5.90.20
       react: 18.3.1
+    optional: true
 
   '@testing-library/dom@10.4.1':
     dependencies:
@@ -4684,7 +4691,7 @@ snapshots:
       '@typescript-eslint/types': 7.18.0
       eslint-visitor-keys: 3.4.3
 
-  '@videojs/http-streaming@3.17.3(video.js@8.23.6)':
+  '@videojs/http-streaming@3.17.4(video.js@8.23.7)':
     dependencies:
       '@babel/runtime': 7.28.6
       '@videojs/vhs-utils': 4.1.1
@@ -4693,7 +4700,7 @@ snapshots:
       m3u8-parser: 7.2.0
       mpd-parser: 1.3.1
       mux.js: 7.1.0
-      video.js: 8.23.6
+      video.js: 8.23.7
 
   '@videojs/vhs-utils@4.1.1':
     dependencies:
@@ -4965,7 +4972,7 @@ snapshots:
       path-type: 4.0.0
       yaml: 1.10.2
 
-  country-flag-icons@1.6.13: {}
+  country-flag-icons@1.6.15: {}
 
   countup.js@2.9.0: {}
 
@@ -6013,7 +6020,7 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  libphonenumber-js@1.12.36: {}
+  libphonenumber-js@1.12.38: {}
 
   lines-and-columns@1.2.4: {}
 
@@ -6122,7 +6129,7 @@ snapshots:
 
   nanoid@3.3.8: {}
 
-  nanostores@1.1.0: {}
+  nanostores@1.1.1: {}
 
   natural-compare@1.4.0: {}
 
@@ -6334,12 +6341,12 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-phone-number-input@3.4.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-phone-number-input@3.4.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       classnames: 2.5.1
-      country-flag-icons: 1.6.13
+      country-flag-icons: 1.6.15
       input-format: 0.3.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      libphonenumber-js: 1.12.36
+      libphonenumber-js: 1.12.38
       prop-types: 15.8.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -6363,7 +6370,7 @@ snapshots:
       react-shallow-renderer: 16.15.0(react@18.3.1)
       scheduler: 0.23.2
 
-  react-virtualized-auto-sizer@2.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-virtualized-auto-sizer@2.0.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -6373,7 +6380,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  react-window@2.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-window@2.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -6575,7 +6582,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  swiper@12.1.0: {}
+  swiper@12.1.2: {}
 
   symbol-tree@3.2.4: {}
 
@@ -6670,10 +6677,10 @@ snapshots:
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
 
-  video.js@8.23.6:
+  video.js@8.23.7:
     dependencies:
       '@babel/runtime': 7.28.6
-      '@videojs/http-streaming': 3.17.3(video.js@8.23.6)
+      '@videojs/http-streaming': 3.17.4(video.js@8.23.7)
       '@videojs/vhs-utils': 4.1.1
       '@videojs/xhr': 2.7.0
       aes-decrypter: 4.0.2
@@ -6681,19 +6688,19 @@ snapshots:
       m3u8-parser: 7.2.0
       mpd-parser: 1.3.1
       mux.js: 7.1.0
-      videojs-contrib-quality-levels: 4.1.0(video.js@8.23.6)
+      videojs-contrib-quality-levels: 4.1.0(video.js@8.23.7)
       videojs-font: 4.2.0
       videojs-vtt.js: 0.15.5
 
-  videojs-contrib-ads@7.5.2(video.js@8.23.6):
+  videojs-contrib-ads@7.5.2(video.js@8.23.7):
     dependencies:
       global: 4.4.0
-      video.js: 8.23.6
+      video.js: 8.23.7
 
-  videojs-contrib-quality-levels@4.1.0(video.js@8.23.6):
+  videojs-contrib-quality-levels@4.1.0(video.js@8.23.7):
     dependencies:
       global: 4.4.0
-      video.js: 8.23.6
+      video.js: 8.23.7
 
   videojs-font@4.2.0: {}
 
