@@ -3,7 +3,7 @@ import { ContentActivateParams, StreamLayerProvider, StreamLayerSDKNotification 
 import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
 import { StreamLayerSDKAdvertisement } from '@streamlayer/react/advertisement'
-import { StreamLayerSDKPolymarket, StreamLayerSDKPolymarketButton } from '@streamlayer/react/polymarket'
+import { StreamLayerSDKPolymarket } from '@streamlayer/react/polymarket'
 import { anonymous } from '@streamlayer/sdk-web-anonymous-auth'
 import { cx } from '@emotion/css'
 
