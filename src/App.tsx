@@ -95,7 +95,6 @@ function App() {
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
             video={<>
               <VideoComponent setInteracted={setInteracted} muted={muted} setMuted={setMuted} interacted={interacted} />
-              <StreamLayerSDKPolymarketButton />
             </>}
             overlay={(
               <>

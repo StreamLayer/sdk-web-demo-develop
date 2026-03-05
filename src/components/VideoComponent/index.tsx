@@ -2,6 +2,7 @@ import Hls from "hls.js";
 import { Preload, Video, VideoIFrame, InteractNote, VideoMuteButton } from './styles'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { VideoPlayerCallback, VideoPlayerData, useStreamLayer } from "@streamlayer/react"
+import { StreamLayerSDKAdvertisement } from "@streamlayer/react/advertisement"
 import { StreamLayerPauseAd } from "@streamlayer/react/pause-ad"
 
 export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch<React.SetStateAction<boolean>>, interacted: boolean, setInteracted: (interacted: boolean) => void
@@ -117,21 +118,27 @@ export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch
           },
         ] : undefined}
       >
-        <Video
-          src={streamSrc}
-          ref={videoRef}
-          muted={muted}
-          onPlay={onVideoPlayWithState}
-          onPause={onVideoPauseWithState}
-          onEnded={onVideoPauseWithState}
-          autoPlay
-          loop
-          playsInline
-          controls={showControls}
-          controlsList="nodownload nofullscreen noremoteplayback"
-        />
+        <StreamLayerSDKAdvertisement
+          muted={!muted}
+          persistent
+          sideBySide
+        >
+          <Video
+            src={streamSrc}
+            ref={videoRef}
+            muted={muted}
+            onPlay={onVideoPlayWithState}
+            onPause={onVideoPauseWithState}
+            onEnded={onVideoPauseWithState}
+            autoPlay
+            loop
+            playsInline
+            controls={showControls}
+            controlsList="nodownload nofullscreen noremoteplayback"
+          />
+        </StreamLayerSDKAdvertisement>
       </StreamLayerPauseAd>
-      {showControls && <VideoMuteButton onClick={() => setMuted((prev) => !prev)}>{muted ? 'unmute' : 'mute'}</VideoMuteButton>}
+      {/* {showControls && <VideoMuteButton onClick={() => setMuted((prev) => !prev)}>{muted ? 'unmute' : 'mute'}</VideoMuteButton>} */}
       {!interacted && errOnPlay && <InteractNote>Click to start</InteractNote>}
     </>
   )

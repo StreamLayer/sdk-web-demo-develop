@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { Banner, Container, Notification, PointsContainer, ContentContainer, Overlay, Sidebar, SideBarOverlay, VideoBox, VideoContainer, VideoPlayer, InApp } from './styles'
 import { useStreamLayerUI } from '@streamlayer/react'
 import throttle from 'lodash.throttle'
+import { StreamLayerSDKPolymarketButton } from '@streamlayer/react/polymarket'
 
 type SDKLayoutProps = {
   mode: 'side-panel' | 'l-bar' | 'overlay' | 'off'
@@ -90,12 +91,12 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
 
   const layoutType = useResponsive()
 
-  let hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.promotionSidebar || uiState.appSidebar || uiState.polymarket)
-  let hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar || uiState.appSidebar || uiState.polymarket)
-  const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner || uiState.appBanner)
+  let hasSidebar = (mode === 'l-bar' || mode === 'side-panel') && (uiState.app || uiState.promotionSidebar || uiState.appSidebar || uiState.polymarket) && (!uiState.promotionSideBySide)
+  let hasOverlay = (mode === 'overlay') && (uiState.promotionOverlay || uiState.promotionSidebar || uiState.appSidebar || uiState.polymarket) && (!uiState.promotionSideBySide)
+  const hasBanner = (mode === 'l-bar') && (uiState.promotionBanner || uiState.appBanner) && (!uiState.promotionSideBySide)
   const hasPromotionNotification = uiState.promotionNotification && !uiState.onboardingNotification
   const hasAppNotification = uiState.appNotification || uiState.onboardingNotification
-  let hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification
+  let hasPromotion = uiState.promotionBanner || uiState.promotionOverlay || uiState.promotionSidebar || uiState.promotionNotification || uiState.promotionSideBySide
 
   if (!interacted && uiState.promotionExternalAd) {
     hasSidebar = false
@@ -112,8 +113,11 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
           height: mode === 'l-bar' ? 'calc(100% - var(--banner-height))' : '100%',
         }}>
           <VideoBox ref={videoBoxRef} className="VideoBox">
-            <VideoPlayer className="VideoPlayer">{video}</VideoPlayer>
-            {!hasPromotion && <PointsContainer>{points}</PointsContainer>}
+            <VideoPlayer className="VideoPlayer">
+              {video}
+              {!hasPromotion && <StreamLayerSDKPolymarketButton />}
+            </VideoPlayer>
+            {!hasSidebar && !hasAppNotification && !hasPromotionNotification && !hasPromotion && <PointsContainer>{points}</PointsContainer>}
             {hasAppNotification && appNotification && <InApp>{appNotification}</InApp>}
           </VideoBox>
         </VideoContainer>
