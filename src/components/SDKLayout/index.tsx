@@ -10,6 +10,7 @@ type SDKLayoutProps = {
   banner?: React.ReactNode
   video?: React.ReactNode
   overlay?: React.ReactNode
+  sbs?: React.ReactNode
   appNotification?: React.ReactNode
   adNotification?: React.ReactNode
   points?: React.ReactNode
@@ -41,7 +42,7 @@ const useResponsive = () => {
   return store
 }
 
-export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, sidebar, overlay, appNotification, adNotification, banner, video }) => {
+export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, sidebar, overlay, sbs, appNotification, adNotification, banner, video }) => {
   const uiState = useStreamLayerUI()
 
   const videoContainerRef = useRef<HTMLDivElement>(null)
@@ -115,6 +116,7 @@ export const SDKLayout: React.FC<SDKLayoutProps> = ({ mode, interacted, points, 
           <VideoBox ref={videoBoxRef} className="VideoBox">
             <VideoPlayer className="VideoPlayer">
               {video}
+              {sbs}
               {!hasPromotion && <StreamLayerSDKPolymarketButton />}
             </VideoPlayer>
             {!hasSidebar && !hasAppNotification && !hasPromotionNotification && !hasPromotion && <PointsContainer>{points}</PointsContainer>}

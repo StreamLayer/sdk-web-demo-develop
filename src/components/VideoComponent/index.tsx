@@ -28,11 +28,12 @@ const searchParams = new URLSearchParams(window.location.search)
 // @ts-ignore
 const pauseAdPreset = pauseAdPresets[searchParams.get('pause_ad')] || null
 
-export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch<React.SetStateAction<boolean>>, interacted: boolean, setInteracted: (interacted: boolean) => void
-}> = ({ interacted, setInteracted, muted }) => {
+export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch<React.SetStateAction<boolean>>, interacted: boolean, setInteracted: (interacted: boolean) => void, videoRef?: React.RefObject<HTMLVideoElement>
+}> = ({ interacted, setInteracted, muted, videoRef: externalVideoRef }) => {
   const [showPauseAd, setShowPauseAd] = useState(false)
   const [pauseAdRendered, setPauseAdRendered] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const internalVideoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = externalVideoRef ?? internalVideoRef;
   const timeoutRef = useRef<NodeJS.Timeout>();
   const sdk = useStreamLayer()
   const [streamSrc, setStreamSrc] = useState('')
@@ -134,6 +135,7 @@ export const VideoComponent: React.FC<{ muted: boolean, setMuted: React.Dispatch
         onRenderPauseAd={onRenderPauseAd}
         onClosePauseAd={onClosePauseAd}
         videoPlayerController={videoPlayerController}
+        // @ts-ignore
         pauseAdExternalUrls={pauseAdPreset || (pauseAdUrl ? [
           {
             template: 'default',
