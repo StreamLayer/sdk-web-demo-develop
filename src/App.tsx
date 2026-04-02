@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { ContentActivateParams, StreamLayerProvider, StreamLayerSDKNotification } from '@streamlayer/react'
 import { StreamLayerSDKPoints } from '@streamlayer/react/points'
 import { StreamLayerSDKReact } from '@streamlayer/react'
@@ -22,6 +22,7 @@ export type ITheme = 'light' | 'dark' | 'tgl'
 const plugins = new Set([anonymous])
 
 function App() {
+  const videoRef = useRef<HTMLVideoElement>(null)
   const [mode, setMode] = useState<IMode>('side-panel')
   const [theme, setTheme] = useState<ITheme>('dark')
   const [tabs, setTabs] = useState(false)
@@ -94,13 +95,19 @@ function App() {
             )}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
             video={<>
-              <VideoComponent setInteracted={setInteracted} muted={muted} setMuted={setMuted} interacted={interacted} />
+              <VideoComponent setInteracted={setInteracted} muted={muted} setMuted={setMuted} interacted={interacted} videoRef={videoRef} />
             </>}
             overlay={(
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
                 <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck />
                 {interacted && <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck externalAd />}
+              </>
+            )}
+            sbs={(
+              <>
+                <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck sideBySide videoRef={videoRef} />
+                {interacted && <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck externalAd sideBySide videoRef={videoRef} />}
               </>
             )}
             appNotification={<StreamLayerSDKNotification />}
