@@ -26,6 +26,7 @@ function App() {
   const [mode, setMode] = useState<IMode>('side-panel')
   const [theme, setTheme] = useState<ITheme>('dark')
   const [tabs, setTabs] = useState(false)
+  const [disabledModes, setDisabledModes] = useState<Partial<Record<IMode, boolean>>>({})
   const [muted, setMuted] = useState(false)
   const [interacted, setInteracted] = useState(false)
 
@@ -49,12 +50,18 @@ function App() {
     }
   }, [])
 
-  const toggleNavBar = ({ stage, type }: ContentActivateParams) => {
-    console.log('onContentActivate', { stage, type })
+  const toggleNavBar = ({ stage, type, isAd }: ContentActivateParams & { isAd?: boolean }) => {
+    console.log('onContentActivate', { stage, type, isAd })
     if (stage === 'activate' && type === 'advertisement') {
       setTabs(true)
+      setDisabledModes({})
+    } else if (stage === 'activate' && (type === 'question' || type === 'insight') && isAd) {
+      setTabs(true)
+      setDisabledModes({ overlay: true })
+      setMode(prev => prev === 'overlay' ? 'side-panel' : prev)
     } else {
       setTabs(false)
+      setDisabledModes({})
     }
   }
 
@@ -77,7 +84,7 @@ function App() {
 
   return (
     <Container className={cx('app-container', theme)} onClick={() => setInteracted(true)}>
-      <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} theme={theme} toggleTheme={toggleTheme} />
+      <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} theme={theme} toggleTheme={toggleTheme} disabled={disabledModes} />
       <StreamLayerProvider containerId="SLDemoContainer" themeMode={theme === 'dark' ? 'dark' : 'light'} videoPlayerController={videoPlayerController} onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />
         <AppContainer>
