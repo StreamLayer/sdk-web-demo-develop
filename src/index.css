@@ -51,6 +51,16 @@ body {
   overflow: hidden;
 }
 
+/* on phones in portrait the layout stacks vertically (video + sidebar content),
+   so it can be taller than the viewport — let the page scroll instead of clipping */
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

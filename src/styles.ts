@@ -1,14 +1,26 @@
 import styled from '@emotion/styled'
-import { breakpoints } from './breakpoints'
+import { breakpoints, breakpointsPortrait } from './breakpoints'
 
 export const Container = styled.div`
     width: 100%;
     height: 100dvh;
     background: rgba(0, 22, 43, 0.90);
+
+    ${breakpointsPortrait(`
+        height: auto;
+        min-height: 100dvh;
+    `)}
 `
 
 export const AppContainer = styled.div`
     height: calc(100% - var(--nav-bar-height));
+
+    ${breakpointsPortrait(`
+        height: auto;
+        min-height: calc(100dvh - var(--nav-bar-height));
+        box-sizing: border-box;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+    `)}
 
     .SL-AdvertisementUIWrap {
         font-size: 24px !important;
