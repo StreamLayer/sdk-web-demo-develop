@@ -67,6 +67,14 @@ function App() {
 
   const videoPlayerController = ({ muted }: { muted?: boolean }) => {
     console.log('videoPlayerController', muted)
+
+    // Mute the element right away, not just via state: React applies state on the next render, and
+    // an iPhone hands its single audio session to the promo before that — pausing our stream
+    // instead of merely overriding it.
+    if (videoRef.current) {
+      videoRef.current.muted = muted ?? false
+    }
+
     setMuted(muted ?? false)
   }
 
@@ -112,9 +120,13 @@ function App() {
               </>
             )}
             sbs={(
+              /* no `muted` here on purpose: passing !muted fed the stream's own mute state back into
+                 the promo, and since the SDK is what mutes the stream, anything that touched it — a
+                 promo copy being dropped on rotation, a pause — came back as "promo, mute yourself".
+                 The SDK owns the promo audio and asks us to duck the stream via videoPlayerController. */
               <>
-                <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck sideBySide videoRef={videoRef} />
-                {interacted && <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck externalAd sideBySide videoRef={videoRef} />}
+                <StreamLayerSDKAdvertisement persistent skipTypeCheck sideBySide videoRef={videoRef} />
+                {interacted && <StreamLayerSDKAdvertisement persistent skipTypeCheck externalAd sideBySide videoRef={videoRef} />}
               </>
             )}
             appNotification={<StreamLayerSDKNotification />}
