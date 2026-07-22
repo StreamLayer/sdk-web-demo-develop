@@ -27,7 +27,15 @@ function App() {
   const [theme, setTheme] = useState<ITheme>('dark')
   const [tabs, setTabs] = useState(false)
   const [disabledModes, setDisabledModes] = useState<Partial<Record<IMode, boolean>>>({})
-  const [muted, setMuted] = useState(false)
+  // Two separate mute concerns, deliberately kept apart:
+  // - streamMuted: our own stream's duck state. The SDK writes it through videoPlayerController when a
+  //   promo wants sound; we mute the host <video>. It is NOT the ad's mute.
+  // - adMuted: the host's own intent to silence the SDK ad, forwarded as the `muted` prop. The SDK
+  //   reads this to mute/unmute the promo. The host owns this lever (see the "Mute ad" toggle).
+  // The old code passed muted={!streamMuted}, feeding the SDK-driven stream state back into the ad,
+  // which formed a loop (duck stream -> ad mute flips -> re-duck ...) and glitched audio on rotation.
+  const [streamMuted, setStreamMuted] = useState(false)
+  const [adMuted, setAdMuted] = useState(false)
   const [interacted, setInteracted] = useState(false)
 
   const toggleMode = useCallback((e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent) => {
@@ -65,10 +73,22 @@ function App() {
     }
   }
 
+  // Called by the SDK when a promo wants sound: it asks us to duck (mute) our OWN stream. This must
+  // only touch the stream — never the ad's `muted` prop — otherwise the two feed back into each other.
   const videoPlayerController = ({ muted }: { muted?: boolean }) => {
     console.log('videoPlayerController', muted)
-    setMuted(muted ?? false)
+
+    // Mute the element right away, not just via state: React applies state on the next render, and
+    // an iPhone hands its single audio session to the promo before that — pausing our stream
+    // instead of merely overriding it.
+    if (videoRef.current) {
+      videoRef.current.muted = muted ?? false
+    }
+
+    setStreamMuted(muted ?? false)
   }
+
+  const toggleAdMuted = useCallback(() => setAdMuted(prev => !prev), [])
 
   useEffect(() => {
     const withTheme = window.localStorage.getItem('with-theme')
@@ -84,7 +104,7 @@ function App() {
 
   return (
     <Container className={cx('app-container', theme)} onClick={() => setInteracted(true)}>
-      <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} theme={theme} toggleTheme={toggleTheme} disabled={disabledModes} />
+      <NavBar mode={mode} tabs={tabs} toggleMode={toggleMode} theme={theme} toggleTheme={toggleTheme} disabled={disabledModes} adMuted={adMuted} toggleAdMuted={toggleAdMuted} />
       <StreamLayerProvider containerId="SLDemoContainer" themeMode={theme === 'dark' ? 'dark' : 'light'} videoPlayerController={videoPlayerController} onContentActivate={toggleNavBar} plugins={plugins as any} withAdNotification sdkKey={SDK_KEY} theme="custom-theme" production={PRODUCTION} event={EVENT_ID}>
         <Auth />
         <AppContainer>
@@ -95,26 +115,31 @@ function App() {
             sidebar={(
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
-                <StreamLayerSDKAdvertisement sidebar='right' muted={!muted} persistent skipTypeCheck />
+                <StreamLayerSDKAdvertisement sidebar='right' muted={adMuted} persistent skipTypeCheck />
                 <StreamLayerSDKPolymarket />
                 {interacted && <StreamLayerSDKAdvertisement sidebar='right' persistent skipTypeCheck externalAd />}
               </>
             )}
             banner={<StreamLayerSDKAdvertisement banner='bottom' persistent />}
             video={<>
-              <VideoComponent setInteracted={setInteracted} muted={muted} setMuted={setMuted} interacted={interacted} videoRef={videoRef} />
+              <VideoComponent setInteracted={setInteracted} muted={streamMuted} setMuted={setStreamMuted} interacted={interacted} videoRef={videoRef} />
             </>}
             overlay={(
               <>
                 <StreamLayerSDKReact withSidebarNotification={false} />
-                <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck />
-                {interacted && <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck externalAd />}
+                <StreamLayerSDKAdvertisement muted={adMuted} persistent skipTypeCheck />
+                {interacted && <StreamLayerSDKAdvertisement muted={adMuted} persistent skipTypeCheck externalAd />}
               </>
             )}
             sbs={(
+              /* `muted` is the host's own lever on the ad (adMuted), NOT the stream's duck state.
+                 Passing !streamMuted here used to feed the SDK-driven stream state back into the promo
+                 (the SDK ducks the stream, so any touch — a promo copy on rotation, a pause — returned
+                 as "promo, mute yourself"). The SDK coordinates the one-source-at-a-time ducking itself
+                 via videoPlayerController; the host only says whether it wants the ad silenced. */
               <>
-                <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck sideBySide videoRef={videoRef} />
-                {interacted && <StreamLayerSDKAdvertisement muted={!muted} persistent skipTypeCheck externalAd sideBySide videoRef={videoRef} />}
+                <StreamLayerSDKAdvertisement muted={adMuted} persistent skipTypeCheck sideBySide videoRef={videoRef} />
+                {interacted && <StreamLayerSDKAdvertisement muted={adMuted} persistent skipTypeCheck externalAd sideBySide videoRef={videoRef} />}
               </>
             )}
             appNotification={<StreamLayerSDKNotification />}

@@ -7,13 +7,15 @@ type NavBarProps = {
     mode: IMode,
     theme: ITheme,
     disabled?: Partial<Record<IMode, boolean | undefined>>,
+    adMuted?: boolean,
+    toggleAdMuted?: () => void,
     toggleTheme: (e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent ) => void,
     toggleMode: (e: React.MouseEvent<HTMLDivElement> | React.ChangeEvent ) => void
 }
 
 const debugTheme = window.localStorage.getItem('with-theme')
 
-export const NavBar: React.FC<NavBarProps> = ({ mode, theme, tabs, toggleMode, toggleTheme, disabled }) => {
+export const NavBar: React.FC<NavBarProps> = ({ mode, theme, tabs, toggleMode, toggleTheme, disabled, adMuted, toggleAdMuted }) => {
     return (
         <NavBarContainer className="NavBarContainer">
             <Logo src="https://cdn.streamlayer.io/sdk-web-demo/sl-logo.png"/>
@@ -38,6 +40,9 @@ export const NavBar: React.FC<NavBarProps> = ({ mode, theme, tabs, toggleMode, t
                 </ControlsSelector>
                 <label htmlFor="select-mode" />
             </ControlsSelectorContainer>}
+            {tabs && toggleAdMuted && <Controls>
+                <ControlButton active={!!adMuted} name='mute-ad' onClick={toggleAdMuted}>{adMuted ? 'Unmute ad' : 'Mute ad'}</ControlButton>
+            </Controls>}
             <LinkToStudio href={STUDIO_LINK} target='_blank'>
                 <img src='https://cdn.streamlayer.io/assets/sdk-web/storybook-assets/studio-link.svg' />
                 <span>Open Studio</span>
